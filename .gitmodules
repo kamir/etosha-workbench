@@ -1,0 +1,6 @@
+[submodule "etosha-hbase-cmd"]
+	path = etosha-hbase-cmd
+	url = https://github.com/kamir/etosha-hbase-cmd
+[submodule "etosha-spark-package"]
+	path = etosha-spark-package
+	url = https://github.com/kamir/etosha-spark-package
