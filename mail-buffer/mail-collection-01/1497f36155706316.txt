@@ -1,0 +1,19 @@
+Dear Team,
+
+
+Am teaching developer class, and a student asked about speculative execution.
+
+
+Now the question is 
+
+"Speculative execution is an act of JT/AM, running one more instance of tasks that may be running slow somewhere. How does the framework ensure that the new copy of task will not end up on a slow machine or would not end up being slow."
+
+
+Next phase of the question is
+
+"In case JT/AM schedules the new speculated task and that also runs slower than expected, will JT/AM continue running both slow tasks or it will suspend one and try somewhere else"
+
+
+Thank You
+
+

@@ -1,0 +1,53 @@
+Hello Solr Experts,
+
+
+I am wondering if anyone did the Solr ingestion performance test before? Base on the public blog from Lucidworks, one can achieve the 101,404 doc/second in a 10 node cluster with 20 shards and replica 1. The average size of each document is 900 byte.
+
+
+
+https://lucidworks.com/2014/06/03/introducing-the-solr-scale-toolkit/
+
+
+However, this test is based on the Solr 4.8 from Lucidworks, and use the local storage and SSD. What about Cloudera Search (Solr 4.10) with HDFS and HDD?
+
+
+thanks,
+Feng
+
+
+
+
+
+---------- Forwarded message ----------
+From: Feng Lu <lufeng@cloudera.com>
+Date: Fri, Aug 25, 2017 at 4:24 PM
+Subject: Solr Ingestion Rate
+To: FCE <fce@cloudera.com>, SE Specialization - Search & Access <se-spec-search-access@cloudera.com>
+
+
+Hello,
+
+IHAC plan to build a log analysis application on the CDH cluster. They use Flume + Morphline to ingest the log file into SOLR in the near real time. The ingestion rate requirement is 150,000 record/second, around 20MB/s and 1.5TB/day. 
+
+
+They did a test on a 8 node cdh cluster (6 worker and 2 master). The index collection is configured as 24 shards and replica 1. The ingestion rate is 2000 record/second. If they increase the shard from 24 to 96, the ingestion rate is 10000 record/second.
+
+
+The worker node's hardware is : 2*8Core, 128GB, 12*4TB. Solr is configured with the 25GB Java Heap.
+
+
+The questions are:
+01 What's the configuration ratio for shards/node?
+02 What's the typical NRT ingestion rate for one solr node?
+03 how to size a solr cluster to meet this NRT ingestion requirement?
+
+
+Thanks,
+Feng 
+
+
+
+
+
+
+

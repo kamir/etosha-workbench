@@ -1,0 +1,237 @@
+Modifying LD_LIBRARY_PATH should work.  We should just be augmenting it for the things we need.  We do this for new GPU feature I believe.  We considered bundling libkudu but then we will get out of date.  You could build a custom base image.
+
+The ideal solution would be for somebody to figure out how to build a python wheels package for Kudu. This would ease kudu library installation beyond CDSW.  To do this means you need to figure out how to build libkudu on Centos 5 (manylinux base Docker image).  I believe this is possible if you upgrade GCC so that the compiler supports c++ 11, which Kudu requires.  You can see some discussion of compiler versions here: https://github.com/pypa/manylinux/issues/118.  Todd Lipcon looked into this briefly but this hasn't been done yet.  If there is expertise in SME around building wheels packages this would be an awesome contribution.
+
+
+Tristan
+
+
+On Tue, Jul 11, 2017 at 7:12 PM, Jordan Volz <jordan.volz@cloudera.com> wrote:
+Update here: 
+
+
+1) This most definitely can be accomplished via extended cdsw engine. Should be relatively straightforward. 
+
+
+2) I've been trying to see if we can get this working via folder mounting. I got further along, but am not quite there. Notes on what has been successful so far: 
+
+
+a) Install kudu-client-devel and kudu-client0 on base cdsw node (it would probably be cool if kudu had a gateway role in CM). Verified that kudu works on base node via python shell. 
+
+
+b) In cdsw, mounted the following files: 
+
+
+These two folders have the kudu client files we are interested in: 
+
+
+c) you can then successfully complete a "pip install kudu-python" in cdsw, but we hit an error when we try to import kudu: 
+
+
+
+
+
+
+It seems like it can't find the libkudu_client.so.0 file and this leads me to believe that I should be adding the paths above to the LD_LIBRARY_PATH environment variable.  When I try to add them to the environment path in CDSW, the session unfortunately doesn't come up. So, two questions here
+
+
+@SME-COE-KUDU -- is setting LD_LIBRARY_PATH the proper thing to do for the above error message? 
+
+
+@SME-CDSW -- is modifying the LD_LIBRARY_PATH known to cause any issues? 
+
+
+
+
+
+
+Jordan VolzCloudera | Systems Engineer
+151 West 26th Street, New York, NY
+https://www.linkedin.com/in/jordanvolz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Tue, Jul 11, 2017 at 2:49 PM, Scott Crawford <scrawford@cloudera.com> wrote:
+I didn't take it any further.  I wonder if you could install Kudu client on the host, and make it available to the CDSW session via a mount?
+
+On Tue, Jul 11, 2017 at 10:48 AM, Jordan Volz <jordan.volz@cloudera.com> wrote:
+Has anyone set this up outside of cdsw? If so, what are the steps? Oop now but I have some time later this afternoon to work on a solution. 
+
+On Jul 11, 2017 11:25 AM, "Michiaki Ariga" <ariga@cloudera.com> wrote:
+I tried to hack setup.py, then I can execute pip install, but I couldn't import kudu. Maybe, it depends on sasl, that means we should build .so files for it. I think we have two choises: 1) create custom engine 2) create conda recipe. But I think it should be chosen 3) apache provides whl format binary on PyPi...
+
+On Tue, Jul 11, 2017 at 11:20 PM Jordan Volz <jordan.volz@cloudera.com> wrote:
+
+Hey Marco, 
+
+
+Not sure if you got a response on this -- I didn't see one. Scott had been looking at this a month or two ago. He may have some recommendations. Tristan Z gave the following insight on another thread: 
+
+
+The simplest way would be to use the extensible engines feature and make sure kudu client libs are installed into base container.  It is likely possible you could install these libs locally into the project, but I'm not positive on the required steps.
+
+
+Jordan VolzCloudera | Systems Engineer
+151 West 26th Street, New York, NY
+https://www.linkedin.com/in/jordanvolz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Tue, Jun 27, 2017 at 2:12 PM, Marco Picelli <marco@cloudera.com> wrote:
+Hi all
+
+
+is it possible to work on kudu via pyspark? any example? 
+
+
+I'm having issues to get a working kudu client in CDSW
+
+
+
+!pip install -v kudu-python
+....
+
+  Running setup.py (path:/tmp/pip-build-ubRJM8/kudu-python/setup.py) egg_info for package kudu-python
+    Running command python setup.py egg_info
+    Cannot find installed kudu client.
+Cleaning up...
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-ubRJM8/kudu-python/
+Exception information:
+Traceback (most recent call last):
+.....
+
+
+
+Thanks
+Marco
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAOHJLO%2B2kep4Ds%2BuxQMoXj3AZuLJmo%3D4BdU%3Dbsh3CND4JWk1jw%40mail.gmail.com.
+
+
+
+-- 
+
+Aki Ariga
+
+Sales Engineer, Cloudera
+Global Site: http://www.cloudera.com/
+Japan Site: http://www.cloudera.co.jp/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Scott CrawfordSr. Sales Engineer
+Cloudera
+(314)378-4993
+scrawford@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/CAOHJLOK66Lbg%3DBf8m%3Dk-HzshcYTzvp277Px6x3tkch7TFKttrw%40mail.gmail.com.
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAHO9uCcDE4dUZ%3DRbntupSoGQTG4iWRdfahyDUgOHNH-yfaasvw%40mail.gmail.com.
+

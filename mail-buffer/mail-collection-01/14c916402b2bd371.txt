@@ -1,0 +1,250 @@
+Hi Annette:
+
+
+I cannot open the pdf file. Am I the only one who cannot open it?
+
+
+Jongwook
+
+
+======================
+Jongwook Woo PhD, Big Data Artist (jongwook@iovtech.co.kr)
+Chief Data Officer/Scientist
+Cloudera Certified Instructor
+Cloudera Certified HBase, Hadoop Developer/Administrator
+IOVTech (Seoul, Korea, Cloudera Training/Resales Partner)
+
+
+-- Get Apache Hadoop for the Enterprise! at http://www.cloudera.com/downloads/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Mon, Apr 6, 2015 at 3:08 PM, Annette Baldenegro <annette@cloudera.com> wrote:
+Hello all,
+
+Just a friendly reminder that the Search Train-the-Trainer starts tomorrow!
+The materials and a link to the VM are now on the Partner Portal if you'd like to download them prior to the event.
+
+
+Hope to see you on the attendee list tomorrow!
+
+
+      -annette
+
+
+
+
+---------- Forwarded message ----------
+From: Annette Baldenegro <annette@cloudera.com>
+Date: Wed, Mar 18, 2015 at 4:35 PM
+Subject: WebEx meeting invitation: Search Train-the-Trainer
+To: actp_instructors <actp_instructors@cloudera.com>
+Cc: Annette Baldenegro <annette@cloudera.com>
+
+
+Hello all,
+
+As Yonah informed you in an earlier email, the Train-the-Trainer for our new Search course is coming up!  Below is the invite to the Webex for the session.
+
+
+Just to provide some additional information to help you decide if you would like to attend:
+Course Description:
+Cloudera University’s three-day Search training course is for developers and data engineers who want to index data in Hadoop for more powerful real-time queries and integrate Cloudera Search with external applications. This course is intended for developers, data engineers, and others in technical roles. Students should have at least basic familiarity with Hadoop, and experience programming in a general-purpose language such as Java, C, C++, Perl, or Python. Students should also be comfortable with the Linux command line, and should be able to perform basic tasks such as creating and removing directories, viewing and changing file permissions, executing scripts, and examining file output. No prior experience with Apache Solr or Cloudera Search is required, nor is any experience with HBase or SQL.
+
+
+
+TTT Dates: April 7th - 9th
+TTT Class times: 7:00am (PT) - 3:00pm (PT)
+Format: WebEx (will be recorded)
+Participant Best Fit: 
+The best candidate to come up to speed to deliver this course would be someone who....
+A) Is certified to teach Cloudera Developer
+B) Teaches Designing and Building Big Data Appliances. The DABBDA covers some of the technologies used in the Search class (Search itself and Morphlines), so someone who's already up to speed with DABBDA will be able to concentrate more on the new concepts, rather than being hit with completely new things. 
+C) Teaches or has observed the HBase course in the past.
+D) Teaches or has observed the Administrator course.
+
+
+
+As always, If you have any questions please let us know,
+      -annette
+
+
+
+
+---------- Forwarded message ----------
+
+From: Annette Baldenegro <messenger@webex.com>
+Date: Wed, Mar 18, 2015 at 1:55 PM
+Subject: (Forward to others) WebEx meeting invitation: Search TTT
+To: annette@cloudera.com
+
+
+
+
+
+   
+	
+        
+			
+			
+	You can forward this invitation to others. 
+
+
+	
+             Hello,
+          
+	
+                Annette Baldenegro invites you to join this WebEx meeting.
+                	           
+
+
+
+
+
+
+	 
+
+
+							
+									Search TTT
+								
+	Every day, from Tuesday, April 7, 2015, to Thursday, April 9, 2015
+								
+	7:00 am  |  Pacific Daylight Time (San Francisco, GMT-07:00)  |  7 hrs
+								
+
+
+
+	 
+
+
+							
+									
+										Join WebEx meeting
+									
+								
+
+
+							
+									Meeting number:
+									626 363 253
+								
+	Meeting password:	TrainMe!
+
+
+
+
+
+	
+
+		 
+
+	Join by phone
+	1-650-479-3208 Call-in toll number (US/Canada)
+	Access code: 626 363 253
+	Global call-in numbers
+
+
+
+						 
+
+	Add this meeting to your calendar.
+
+
+	 
+
+
+	
+        Can't join the meeting?
+     	
+        	Contact support.
+		
+
+
+	 
+
+
+						
+							
+							
+									IMPORTANT NOTICE: Please note that this WebEx service allows audio and other information sent during the session to be recorded, which may be discoverable in a legal matter. By joining this session, you automatically consent to such recordings. If you do not consent to being recorded, discuss your concerns with the host or do not join the session.
+
+
+				
+
+
+	
+
+
+
+
+
+
+
+
+
+-- 
+Annette D. Baldenegro
+
+Training Delivery Manager, 
+Educational Services, Cloudera, Inc.
+(423) 598-9631
+annette@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Annette D. Baldenegro
+
+Training Delivery Manager, 
+Educational Services, Cloudera, Inc.
+(423) 598-9631
+annette@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To unsubscribe from this group and stop receiving emails from it, send an email to actp_instructors+unsubscribe@cloudera.com.
+
+
+
+
+
+

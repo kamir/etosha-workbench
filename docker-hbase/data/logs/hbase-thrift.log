@@ -1,0 +1,21 @@
+2017-08-29 14:14:51,430 INFO  [main] util.VersionInfo: HBase 1.2.4
+2017-08-29 14:14:51,452 INFO  [main] util.VersionInfo: Source code repository git://asf-dev/home/busbey/projects/hbase revision=67592f3d062743907f8c5ae00dbbe1ae4f69e5af
+2017-08-29 14:14:51,452 INFO  [main] util.VersionInfo: Compiled by busbey on Tue Oct 25 18:10:20 CDT 2016
+2017-08-29 14:14:51,453 INFO  [main] util.VersionInfo: From source with checksum b45f19b5ac28d9651aa2433a5fa33aa0
+2017-08-29 14:14:51,805 INFO  [main] thrift.ThriftServerRunner: Using default thrift server type
+2017-08-29 14:14:51,807 INFO  [main] thrift.ThriftServerRunner: Using thrift server type threadpool
+2017-08-29 14:14:51,931 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-29 14:14:52,559 INFO  [main] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-08-29 14:14:52,687 INFO  [main] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-08-29 14:14:52,687 INFO  [main] impl.MetricsSystemImpl: HBase metrics system started
+2017-08-29 14:14:52,824 INFO  [main] mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-08-29 14:14:52,828 INFO  [main] http.HttpRequestLog: Http request log for http.requests.thrift is not defined
+2017-08-29 14:14:52,850 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
+2017-08-29 14:14:52,870 INFO  [main] http.HttpServer: Added global filter 'clickjackingprevention' (class=org.apache.hadoop.hbase.http.ClickjackingPreventionFilter)
+2017-08-29 14:14:52,889 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context thrift
+2017-08-29 14:14:52,889 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-08-29 14:14:52,890 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-08-29 14:14:52,941 INFO  [main] http.HttpServer: Jetty bound to port 9095
+2017-08-29 14:14:52,946 INFO  [main] mortbay.log: jetty-6.1.26
+2017-08-29 14:14:53,269 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:9095
+2017-08-29 14:14:53,299 INFO  [main] thrift.ThriftServerRunner: starting TBoundedThreadPoolServer on /0.0.0.0:9090 with readTimeout 60000ms; min worker threads=16, max worker threads=1000, max queued requests=1000

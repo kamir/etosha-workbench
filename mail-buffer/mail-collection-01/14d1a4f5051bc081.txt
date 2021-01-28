@@ -1,0 +1,49 @@
+Great Pig Best Practices paper (link below), for those who teach DA and
+
+have students whose companies are using Pig.
+
+
+Can we get the document below to our Partner instructors?  I've reviewed it
+
+and it's all tech (no company positioning, customer mentions, etc)
+
+
+Thanks,
+
+--Nate
+
+---------- Forwarded message ----------
+From: Keith Smith <keith@cloudera.com>
+Date: Fri, May 1, 2015 at 5:42 PM
+Subject: Pig Best Practices Documentation
+To: FCE <fce@cloudera.com>
+
+
+I was at a client that requested help from us on Pig code already running in their production environment.  They currently have more than 150 Pig scripts throughout their environment and the initial recommendation of migrating code to another language has been met with resistance.
+
+Since they are requesting tips or tricks to help their already existing code be more performant, I reached out to a few of you and searched box for best practices but there is not much Cloudera documentation on the subject beyond what Apache provides.  Based on my experience working with Pig I compiled the following document as an initial pass at a best practices.  I am by no means an expert and would appreciate feedback and advice so that others can benefit from the shared knowledge pool in the future.
+
+
+I realize crunch or spark are better options at this time, but hoping to help out those with customers currently entrenched in Pig.  In the long run I am hoping that Spork will be an option for them as it should provide some immediate performance gains, but that means the Pig code will live on.
+
+
+https://cloudera.box.com/s/zl5mj0gjevy4tvhzkg8n2onrrr7ic9hi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+Hi team,
+Do we have any official documentation regarding running multiple tenants on Cloudera Search.  
+
+
+Do we recommend running it all on 1 service or create multiple services in CM, which means multiple solr cores?
+
+
+Also if we create multiple services (with the same znode), would we be able to create an alias across different collections?
+
+
+Thanks a lot,
+
+Jeff
+
+

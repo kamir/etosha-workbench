@@ -1,0 +1,34 @@
+hgadre@cloudera.com has invited you to edit the following document:
+
+
+SOLR SSL support
+
+
+
+
+
+
+
+
+
+Hi,
+
+I have prepared a document describing all steps necessary to configure Solr SSL (along with dependent components). Please take a look and let me have your feedback.
+
+Thanks
+Hrishikesh
+
+Open in Docs
+				
+			
+			
+
+	
+				
+			
+			
+
+
+
+	Google Docs: Create and edit documents online.	
+

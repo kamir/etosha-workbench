@@ -1,0 +1,55 @@
+The way we have implemented search w HBase is to eaves drop into replication events. It should not affect HBase in any way, as long as you deploy the search services (that do the indexing and serving the indexes) on separate nodes (to assure as much RAM to both HBase and Search services, as both are memory intensive. Also, you might want to configure with cgroups both for HBase and Solr, to assure no other workload affects these "real time" services, especially if there are SLAs involved on the search side.
+
+
+
+Further, MapReduce indexing of HBase should be very much same as any MapReduce scanning of HBase content. Also, if you need to control this workload, make sure to control it the way CM/YARN or MapReduce1 (through slots) that you are used to with MapReduce.
+
+
+
+
+Last but not least, both HBase and Solr are (again) memory intense services. Depending on JVMs and therefore garbage collection performing well. To avoid slow-down of these services over time, you should follow GC tuning guidelines for pause time sensitive workloads (I bet we have such for HBase, which should equally apply to Solr, as these services are very similar in character). I.e. use concurrent markandsweep, try with a fair amount of "nursery" alt. newratio - or whatever the JVM at hand calls the young generation configuration parameters. Make sure to do compaction at every GC, to postpone ("avoid") full-heap compaction = stop the world pauses as much as possible. 
+
+
+
+
+Once we have dynamic membership we could even consider adding a server, and shutting a GC-congested server down, in a timely manner to never even show issues that would break response time SLAs....but that is a futuristic dream right now, too much else on the plate for the time being.
+
+
+
+
+These are my 2 cents...hopefully the rest of the team will also weigh in...
+
+
++coe
+
+
+/Eva
+
+
+
+
+
+On Tue, Apr 1, 2014 at 9:36 AM, Jesse Anderson <jesse@cloudera.com> wrote:
+
+
+In this blog post, it says:Is HBase an optimal storage medium for the given use case?
+
+
+
+I want to double check that this refers to the usual HBase caveats that one would have for any HBase project or are there extra caveats associated with Search + HBase? The article talks about slow downs due to writes, etc. Are there others?
+
+
+
+
+
+Thanks,
+
+
+Jesse
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+No that is not true.  Even with Sentry enabled, the execution of tasks still happens as the end user when Kerberos is enabled.  Hive and Impala will use system users for that, but Spark, Pig, MR, etc. will all run tasks as the regular user, thus these users must exist on every node in the cluster (via LDAP or otherwise).
+
+On Tue, Mar 10, 2015 at 12:25 AM, Todd Grayson <tgrayson@cloudera.com> wrote:
+I was just listening to a presentation where our organization stated that sentry made it no longer necessary to be provisioning user accounts at the OS level for a cluster.
+
+Have we achieved this state? Is this now true (we can avoid OS accounts for users when sentry is enabled?)
+
+
+Todd
+
+
+-- 
+Todd GraysonCustomer Operations Engineering
+
+
+
+
+
+
+
+
+
+
+
+
+

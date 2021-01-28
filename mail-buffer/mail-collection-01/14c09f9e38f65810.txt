@@ -1,0 +1,107 @@
+FYI
+---------- Forwarded message ----------
+From: Michael Crutcher <mcrutcher@cloudera.com>
+Date: Tue, Mar 10, 2015 at 9:28 PM
+Subject: Re: Hortonworks Solr claim
+To: John Darrah <jdarrah@cloudera.com>
+Cc: Eva Andreasson <eva@cloudera.com>, Jairam Ranganathan <jairam@cloudera.com>
+
+
+They're referring to HSM (hierarchial storage management).  It's in HDFS 2.6 which is what CDH 5.4 is rebased off of.  There's no intelligence to it at this point; volumes are manually and statically defined but it is possible to specify that certain volumes are on different types (tiers) of storage.  We're also pulling in important fixes to what was included in HDP 2.2 that will show up in HDFS 2.7 when it's released.
+
+I don't think we need to bash it.  We think it's a good idea, we contributed to it, we're pulling it in after testing and contributing patches.
+
+
+Thanks,
+Michael  
+
+
+On Tue, Mar 10, 2015 at 7:05 PM, John Darrah <jdarrah@cloudera.com> wrote:
+Looks like this:
+https://issues.apache.org/jira/browse/HDFS-4672
+
+http://hortonworks.com/blog/heterogeneous-storage-policies-hdp-2-2/
+
+
+Any help you can provide on why this is not ready for prime time and what our plans are  would be appreciated have a prospect that is putting a lot of weight behind this feature. 
+
+
+Thanks,
+
+
+John
+
+
+On Tue, Mar 10, 2015 at 8:00 PM, Eva Andreasson <eva@cloudera.com> wrote:
+News to me too - Jai (CM) and Michael (HDFS) --- can you help on this one?
+
+On Tue, Mar 10, 2015 at 6:51 PM, John Darrah <jdarrah@cloudera.com> wrote:
+Eva,
+
+I had a prospect tell me that Hortonworks is claiming that they can run clusters with both SSDs and spinning disk and intelligently spread data between.  The example he gave was to have Solr indexes on SSDs and regular batch stuff on spinning disk.  Have you heard of this?  I remember reading something about being able to do this type of storage aware data placement but I didn't think it existed yet.  
+
+
+Thanks,
+
+
+John
+
+
+-- 
+John DarrahSales Engineer
+
+Cell: 303 919 7214
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+John DarrahSales Engineer
+
+Cell: 303 919 7214
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+Hi Tünde
+
+1. ext2 is now very old. Pretty much every current Linux filesystem is a journaling filesystem these days (I can't think of one that isn't, off the top of my head). I believe that when our engineers looked at disabling journaling they found very little difference in terms of speed -- and any increase there was, was outweighed by the fact that a crash would require a full fsck of the filesystem when the machine reboots, which is extremely painful if you have a 36TB worker node...
+
+
+2. I'm not aware of any specific papers or tests, but that's a fairly well-accepted rule of thumb. More important than just the performance impact, though, is the fact that you need to build a pretty complex set of rules to allow all the relevant daemons to talk to each other on all the ports they need -- and that an update to Hadoop could easily break things.
+
+
+Ian.
+
+
+---
+Ian Wrigley
+Director, Educational Curriculum
+Cloudera, Inc
+Cell: (323) 819 4075
+
+
+
+On Jan 20, 2015, at 6:20 AM, Tünde Balint <tbalint@xebia.com> wrote:
+
+
+
+
+
+
+
+
+Hi all,
+
+
+
+
+
+The students asked me a couple of questions
+
+	What is the reason why we don’t mention non-journaling filesystems (they asked esp. for ext2)? What is cloudera’s stand point for this? What would the performance implications be?
+	Regarding SELinux : do we have any tests/papers or something which underlines that the performance impact is 7-10% and why? And what is the required complex configuration?
+
+
+
+
+
+
+I will also try to look up some answers after the course, but was hoping that somebody just knows the answers :)
+
+
+
+
+
+
+Met vriendelijke groet/Kind regards/Tisztelettel,
+
+Tünde Bálint
+
+Big Data Solutions Wizard
+
+▉▉▉▉▉▉▉ GoDataDriven
+
+M: +31 (0)635 118 414
+
+
+
+
+
+
+W: http://godatadriven.com, proudly part of the Xebia group
+
+
+
+
+
+
+

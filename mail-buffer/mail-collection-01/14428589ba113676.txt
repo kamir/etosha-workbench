@@ -1,0 +1,22 @@
+Hi team and Kathleen --
+
+
+I'm teaching at Lowe's this week and the students are asking about
+
+throttling Sqoop to only import "X" GB of data from a Teradata system
+
+in Y amount of time.
+
+The reason is that Sqoop is causing the Teradata system's production operations to get bottlenecked.
+
+
+Any pointers/references would be great --
+
+
+Thanks!
+
+
+
+--Nate
+
+

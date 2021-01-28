@@ -1,0 +1,23 @@
+Hi folks
+
+I don't usually pepper this mailing list with single link e-mails, but if you teach Admin you've probably had at least a few students ask whether Infiniband is a good idea. This answer from Cloudera's Eric Sammer is a great summation of the pros and cons; well worth reading if you teach Admin (or even if you don't...).
+
+
+https://www.quora.com/Is-it-worth-using-Infiniband-in-a-Hadoop-cluster-Why-What-is-the-bang4-payoff
+
+
+Best
+
+
+Ian.
+
+
+---
+Ian Wrigley
+Sr. Curriculum Manager
+Cloudera, Inc
+Cell: (323) 819 4075
+
+
+
+

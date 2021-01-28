@@ -1,0 +1,18 @@
+I was just listening to a presentation where our organization stated that sentry made it no longer necessary to be provisioning user accounts at the OS level for a cluster.
+
+Have we achieved this state? Is this now true (we can avoid OS accounts for users when sentry is enabled?)
+
+
+Todd
+
+
+-- 
+Todd GraysonCustomer Operations Engineering
+
+
+
+
+
+
+
+

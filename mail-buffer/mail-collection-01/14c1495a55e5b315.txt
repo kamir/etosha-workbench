@@ -1,0 +1,52 @@
+Hey Chris,
+
+Do we also need steps to configure SSL in non-CM environment?
+
+
+Thanks
+Hrishikesh
+
+
+On Fri, Mar 13, 2015 at 12:19 PM, Hrishikesh Gadre (via Google Docs) <hgadre@cloudera.com> wrote:
+
+
+hgadre@cloudera.com has invited you to edit the following document:
+
+
+SOLR SSL support
+
+
+
+
+
+Hi,
+
+I have prepared a document describing all steps necessary to configure Solr SSL (along with dependent components). Please take a look and let me have your feedback.
+
+Thanks
+Hrishikesh
+
+Open in Docs
+
+
+				
+			
+			
+
+	
+				
+			
+			
+
+
+
+	Google Docs: Create and edit documents online.	
+
+
+
+
+
+
+
+
+

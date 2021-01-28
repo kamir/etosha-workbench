@@ -1,0 +1,342 @@
+> The math for it is easy. 1.5 x number of cores x 4G(max recommended heap for tasks) + 1G for OS = good starting point for RAM. 
+Obviously the upper limit is the physical memory available on the node.
+
+
+
+
+When OOM killer starts, then TT is usually primary candidate to be killed (because is and its kids (map and reduce tasks) contribute to high badness score).
+
+I wrote a blog post about heavy swapping and OOM killer in Hadoop nodes: http://hakunamapdata.com/two-memory-related-issues-on-the-apache-hadoop-cluster/ It could be useful.
+
+
+
+
+@Michael
+In my opinion, 4GB of RAM is a lot. I know that Yahoo! uses 1.5GB for map and 2.5GB for reduce tasks usually (they use YARN). LinkedIn uses something similar, afaik.
+
+I would not give 4GB for a task, unless I have memory hungry workload. I would recommend 1-2GB as starting point. Why do you recommend 4GB?
+
+
+
+
+
+
+2014-03-14 15:28 GMT+02:00 Ian Wrigley <ian@cloudera.com>:
+
+Actually, this is not quite correct. We recommend setting swappiness to 0. That tells the kernel to swap only to avoid an out of memory condition. (Setting it to 0 does not forbid the kernel to swap -- rather, to swap only if it absolutely must.)
+
+
+Ian.
+
+On Mar 14, 2014, at 8:07 AM, Michael Clarkson <michael.clarkson@cloudera.com> wrote:
+
+
+in /etc/sysctl.conf add the following: vm.swappiness = 5
+
+Don’t go to zero, because if it tries to swap and isn’t allowed to, ugly things happen. With a swappiness of 5, it waits till 95% RAM usage. When it can’t swap, the OOM Killer comes out, often with bad results for your running processes. Yes, swapping is bad. Having a node shot in the head by OOM is worse. 
+
+
+
+Of course the real answer if you are swapping after setting swappiness to 5 is to either tweak down max mappers and max reducers or upgrade RAM to sustain the mappers and reducers. The math for it is easy. 1.5 x number of cores x 4G(max recommended heap for tasks) + 1G for OS = good starting point for RAM. 
+
+
+
+I have a student this week who had a “Hadoop Consultant” not from Cloudera recommend 4G of RAM per slave node, which tells me that guy has never looked at the current recommendations.
+
+
+
+
+--
+Michael Clarkson
+CCAH, Cloudera Instructor
+
+
+
+
+
+
+
+
+
+
+On Mar 14, 2014, at 5:04 AM, Bertrand Dechoux <bdechoux@xebia.fr> wrote:
+
+And from what I remember, that something which is presented within the admin materials.
+
+
+Regards
+
+
+Bertrand
+
+
+
+
+Bertrand Dechoux
+
+
+
+
+
+« Software Development Done Right » 
+
+156, boulevard Haussmann, 75008 Paris 
+
+
++33 (0) 6 30 66 89 38 / bdechoux@xebia.fr
+
+
+
+
+
+
+
+
+
+
+On 14 March 2014 10:17, Kris Geusebroek <kgeusebroek@xebia.com> wrote:
+
+
+
+
+
+
+
+Hi Martin,
+
+
+
+
+I think you can set the vm.swappiness sysctl option on linux OS level to 0. To the best of my knowledge this is the setting you need.
+
+
+
+
+
+Cheers Kris
+
+
+
+
+
+
+
+
+Met vriendelijke groet, Kind regards,
+
+
+ 
+
+
+Kristiaan Geusebroek
+
+
+Consultant
+
+
+ 
+
+
+
+
+
+
+
+
+<image005.jpg><image006.png>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+Email: kgeusebroek@xebia.com
+
+
+
+
+
+
+Tel: +31 (0)35 538 1921
+
+
+
+
+Fax: +31 (0)35 538 1922
+
+
+
+
+Mobiel: +31 (0)6 3069 7223
+
+
+
+
+
+
+ 
+
+
+
+
+Utrechtseweg 49
+
+
+
+
+1213 TL Hilversum
+
+
+
+
+The Netherlands
+
+
+
+
+http://www.xebia.com
+
+
+
+
+ 
+
+
+
+
+Xebia Blog: http://blog.xebia.com/
+
+
+
+
+ 
+
+
+
+
+
+
+On 14 Mar 2014, at 09:03, Martin Wang <martin.wang@analyticservice.net> wrote:
+
+
+
+
+
+Hi Friends,
+
+    I have a cluster with 5 machines, CDH 4.6.0, everything is fine except sometimes it shows the yellow warn "swapping". Usually after running a job, also appear when the whole cluster keep idle for several days.
+
+
+
+    I googled a lot, but can't find a way to avoid these kind of swapping. Can you help me?
+
+
+
+
+
+
+
+
+
+
+Martin Wang 王鹏
+
+Consultant | Analytic Service Ltd.
+
+No. 100 An Xi Road, Shanghai 200050
+
+上海市长宁区安西路100号 200050
+
+
+
+M. 86 186 1655 4936
+
+www.analyticservice.net
+
+
+
+
+
+
+
+
+
+
+
+To unsubscribe from this group and stop receiving emails from it, send an email to
+actp_instructors+unsubscribe@cloudera.com.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To unsubscribe from this group and stop receiving emails from it, send an email to actp_instructors+unsubscribe@cloudera.com.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+Ian Wrigley
+
+Sr. Curriculum Manager
+
+Cloudera, Inc
+
+Cell: (323) 819 4075
+
+
+
+
+
+
+
+
+
+
+
+To unsubscribe from this group and stop receiving emails from it, send an email to actp_instructors+unsubscribe@cloudera.com.
+
+
+
+
+
+
+
+

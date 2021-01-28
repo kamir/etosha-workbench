@@ -1,0 +1,22 @@
+Gianluca Righetto created GIRAPH-931:
+----------------------------------------
+
+             Summary: Provide a Strongly Connected Components algorithm
+                 Key: GIRAPH-931
+                 URL: https://issues.apache.org/jira/browse/GIRAPH-931
+             Project: Giraph
+          Issue Type: Improvement
+          Components: examples
+            Reporter: Gianluca Righetto
+            Priority: Minor
+
+
+Provide an implementation of an algorithm for finding strongly connected components in a graph to augment the giraph-examples library. This has been initially proposed on GSoC'14.
+A handful of graph algorithms have been researched in this paper: "Optimizing Graph Algorithms on Pregel-like Systems" (Salihoglu, S., Widom, J., 2014), and a detailed explanation of SCC can also be found in it.
+
+
+
+--
+This message was sent by Atlassian JIRA
+(v6.2#6252)
+

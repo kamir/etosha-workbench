@@ -1,0 +1,72 @@
+No, the requirement is restricted to TaskTracker nodes, specifically (or the equivalent YARN role; the name escapes me at present). You can kinit on the gateway and submit jobs to the cluster.
+
+Brian Burton
+
+
+
+
+
+
+On Wed, Nov 5, 2014 at 12:17 PM, Prashant Sharma <psharma@cloudera.com> wrote:
+Thanks for responding Todd.
+
+I know that on the cluster nodes this is a requirement. My question was about edge nodes that only have "gateway" roles assigned to them.
+
+
+On Wed, Nov 5, 2014 at 2:03 PM, Todd Grayson <tgrayson@cloudera.com> wrote:
+Yes with regard to OS account for users submitting unique jobs or managing discrete data sets; there should be a OS user account that can be mapped to, from which group can be resolved.
+
+You can evaluate tools like SSSD or Centrify or VAS to provide a deeper user mapping capability (derived usernames, using alternative attributes, etc.)
+
+
+Todd
+
+
+On Wed, Nov 5, 2014 at 11:56 AM, Prashant Sharma <psharma@cloudera.com> wrote:
+Hi,
+
+When we kerberize a cluster there is a requirement that a linux user with the same username as the user who is authenticating should exist on all the nodes. Is this true for the edge nodes as well? I know in an ideal scenario things should be uniform on all the cluster nodes. We are in an environment where the edge nodes are managed by one team and cluster nodes are managed by another team and the team that manages the edge nodes can't create users based on the "sAMAccountname" in Active directory.
+
+
+Also, these edge nodes only have "gateway" roles assigned on them.
+
+
+So far in my testing I have not run into an issue running commands/jobs/queries form an edge node that doesn't have a linux user with the same name as the user that we are "kinit-ing" as to get the kerberos ticket.
+
+
+I know this is a very specific (and maybe weird) scenario, but just wanted to see if anybody knows of an issue with this setup.
+
+
+Regards,
+Prashant
+
+
+
+
+
+
+
+
+
+
+-- 
+Todd GraysonCustomer Operations Engineering
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+Hi All
+
+I got a query in Admin Course about how to change default installation paths of RPM files.
+
+Do we need to compile these from source? If yes, then please point me to correct location where I can get the source?
+
+
+Regards!

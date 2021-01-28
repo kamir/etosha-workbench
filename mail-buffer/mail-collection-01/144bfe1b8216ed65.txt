@@ -1,0 +1,143 @@
+
+Hi Martin,
+
+
+
+
+I think you can set the vm.swappiness sysctl option on linux OS level to 0. To the best of my knowledge this is the setting you need.
+
+
+
+
+
+Cheers Kris
+
+
+
+
+
+
+Met vriendelijke groet, Kind regards,
+
+
+ 
+
+
+Kristiaan Geusebroek
+
+
+Consultant
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Email: kgeusebroek@xebia.com
+
+
+Tel: +31 (0)35 538 1921
+
+
+Fax: +31 (0)35 538 1922
+
+
+Mobiel: +31 (0)6 3069 7223
+
+
+ 
+
+
+Utrechtseweg 49
+
+
+1213 TL Hilversum
+
+
+The Netherlands
+
+
+http://www.xebia.com
+
+
+ 
+
+
+Xebia Blog: http://blog.xebia.com/
+
+
+ 
+
+
+
+
+
+
+On 14 Mar 2014, at 09:03, Martin Wang <martin.wang@analyticservice.net> wrote:
+
+
+
+
+
+Hi Friends,
+
+    I have a cluster with 5 machines, CDH 4.6.0, everything is fine except sometimes it shows the yellow warn "swapping". Usually after running a job, also appear when the whole cluster keep idle for several days.
+
+    I googled a lot, but can't find a way to avoid these kind of swapping. Can you help me?
+
+
+
+
+
+
+
+
+Martin Wang ��楣�
+
+Consultant | Analytic Service Ltd.
+
+No. 100 An Xi Road, Shanghai 200050
+
+涓�娴峰��垮���哄��瑗胯矾100�� 200050
+
+M. 86 186 1655 4936
+
+www.analyticservice.net
+
+
+
+
+
+
+
+
+
+
+
+To unsubscribe from this group and stop receiving emails from it, send an email to
+actp_instructors+unsubscribe@cloudera.com.
+
+
+
+
+
+
+
+
+

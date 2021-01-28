@@ -1,0 +1,80 @@
+Hi Joel,
+
+I am the one who wrote that code. This is a case in which the correct behavior wasn't specified in the API, as Flume's documentation neither states that it is nor is not OK to modify the original list. 
+
+
+
+
+Since it is safer to create and return a new list, that is what I did. This follows the example of the built-in RegexFilteringInterceptor:
+
+
+https://github.com/apache/flume/blob/master/flume-ng-core/src/main/java/org/apache/flume/interceptor/RegexFilteringInterceptor.java#L128
+
+
+
+
+
+As a counterexample, I do note that a few other built-in interceptors modify the list directly, so that is apparently OK too. When in doubt, I generally prefer to teach the "safe" way versus the "efficient" way.
+
+
+
+
+Hope that helps,
+
+
+Tom
+
+
+
+
+
+
+
+On Sun, Aug 10, 2014 at 9:55 AM,  <joel@exitcertified.com> wrote:
+
+
+On page 7-29 of the book you will find the following code.
+
+
+
+  @Override
+
+  public List<Event> intercept(List<Event> events) {
+
+    List<Event> result = new ArrayList<Event>();
+
+    for (Event event : events) {
+
+        Event intercepted = intercept(event);
+
+        result.add(intercepted);
+
+    }
+
+    return result;
+
+
+
+My question is: Why do we need the result list in this example?
+
+All we are doing is modifying a header in each event instance.
+
+Why not simply return the original list with its modified headers?
+
+
+
+Am I missing something?
+
+
+
+Thanks,
+
+Joel
+
+
+
+
+
+
+
+

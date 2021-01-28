@@ -1,0 +1,103 @@
+Hallo Mirko, wie geht es Ihnen?
+
+We haven't spoken for a while, I got involved with many stuff at work that kept me very busy in the last couple of months.
+Anyway, I wanted to let you know that I have finally pushed the changes for the Strongly Connected Components algorithm for Apache Giraph in my GitHub fork.
+Would you mind taking a look at it? I think it would be a good exercise to do some kind of pair programming.
+This is the repository where you can find my work: https://github.com/grighetto/giraph/tree/trunk (commit 641391132fa11b27acf0b24382e619b89801b121)
+
+
+I added a unit test that generates a graph and finds the SCC in it. To help you visualize what this graph looks like (and to identify the components) I created a Gephi visualization that is attached to this message. Each color in the graph represents a different strongly connected component.
+Please, let me know what you think.
+
+
+By the way, what steps should I follow next to make this contribution back to Giraph? Should I create a Jira issue somewhere and send a diff/patch?
+
+
+Thanks,
+Gianluca Righetto
+
+ 
+ 
+Am 27.04.2014 um 07:29 schrieb Mirko Kämpf:
+
+Hi Gianluca,
+
+this is not good news on one side, but that you want to go on with this project is great.
+I will support you as good as I can. 
+
+
+What are the properties of your development environment?
+
+I do my tests with a 4 node C5 cluster and with a one node dev-cluster.
+After you forked the master branch I will clone it, so we are on the same track.
+Let me know the name of the project.
+
+
+
+Enjoy your Sunday!
+
+
+Cheers,
+Mirko
+
+
+   
+
+
+On Thu, Apr 24, 2014 at 7:14 PM, Gianluca Righetto <gianluca@menttis.com> wrote:
+
+Hello,
+
+Unfortunately, my proposal wasn't selected for GSoC this year, actually, I was surprised that only 39 projects projects were accepted by Apache (that's low considering the number of projects supported by the foundation) and none of them were related to Giraph, which is a shame.
+
+Anyway, I think I've gone too far to let the effort die now, so I'd like to make this contribution anyway, I even got the code started already.
+So, what would be the best way to do it? Should I fork the master branch in GitHub and send a pull request when everything is ready?
+
+Mirko, would you still be interested in helping me out by reviewing the code, trying it out, or simply providing some comments?
+
+
+Many thanks to both of you and, hopefully, next year Giraph will be amongst the selected projects.
+
+
+
+Best regards,
+Gianluca Righetto
+
+Am 18.03.2014 um 20:41 schrieb Gianluca Righetto:
+
+
+Hello Mirko and Avery,
+
+I'm sending this message just to let you both know that I officially submitted my project proposal to Google Summer of Code, given you two were the ones who showed some interest in supporting the project.
+
+You can take a look at the proposal in Google's Melange platform here: http://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/gianlucar/5629499534213120
+
+
+
+Thanks,
+Gianluca Righetto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+ 
+
+
+
+
+
+
+
+
+

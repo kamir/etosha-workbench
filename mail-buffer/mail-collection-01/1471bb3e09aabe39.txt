@@ -1,0 +1,46 @@
+Hi Ravi,
+
+My responses are inline...
+
+
+On Wed, Jul 9, 2014 at 9:44 AM, Ravi Gurbaxani <ravi@technocrafty.com> wrote:
+
+
+1. While connecting BeeLine, we are using the hostname and port. Is there a configuration that I can put in my hive-site so that I dont have to specify the hostname and port everytime.
+
+
+
+
+
+
+I agree this would be a very nice feature, but I asked this to Xuefe Zhang, one of our Hive committers earlier this year. He said that Beeline doesn't support setting a default connection string (though IIRC the port number specifically does have a default, so at least that part can be omitted). A simple workaround would be to set a shell alias for beeline that sets the connection details, so you could just use the alias instead.
+
+
+
+
+2. On the YARN UI, we see  User Metrics for dr.who, what exactly is dr.who and how can that be changed. I understand its a default user, but some more light on that would be great.
+
+
+
+
+
+
+It's a joke that got committed into the Hadoop codebase a long time ago. Dr. Who is a British science fiction program. When Hadoop cannot figure out the current user's identity, it uses the default value of 'dr.who' (and if it cannot figure out the current group, it uses a 'tardis' as the default, which is another reference to that show). There is an open JIRA to replace these with something less amusing (https://issues.apache.org/jira/browse/HADOOP-7307).
+
+
+
+
+
+
+3. For HiveServer2 also, we require metastore service, why HIverserver2 to MySQL connectivity was directly preferred.
+
+
+
+
+I am not sure I understand the question, but let me try to rephrase. Why does Beeline use Thrift to  connect to HiveServer2, which in turn connects to the metastore database? Why not have Beeline connect directly to the metastore database? I guess the main reason is that the former does not require direct access to the database, which can be a source of security problems. Rather than enabling access to the database from every client (in terms of configuring both network and database access), the sysadmin now only needs to enable access from the machine running HiveServer2.
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+BTW they should be aware that the reason CM hasn't added rolling restart for Solr is because we haven't verified it internally that it works, and there can be problems if you just do a simple restart of servers one after the other.
+
+On Thu, Mar 5, 2015 at 4:44 PM, Miklos Christine <mwc@cloudera.com> wrote:
+CM does have this level of granularity, it's per role not at the service level. For example, each service has a role entity:
+http://nightly53-1.ent.cloudera.com:7180/cmf/services/9/instances/3/status
+
+
+
+I have an example where I had to restart Impala roles in batches during the early days of Impala on large clusters.
+https://github.com/mrchristine/hadoopTools/blob/master/cm/impala_start.sh
+
+
+
+You can modify the script to find the SOLR service instead of Impala. 
+
+
+The gist of it is, run the following to get the role name
+curl -u admin:admin "http://nightly53-1.ent.cloudera.com:7180/api/v6/clusters/Cluster%201/services" |grep -B 1 "type.....SOLR"  | grep name | awk '{print $3}' | sed "s/[\",]//g"
+
+Get a list of the roles:
+curl -u admin:admin "http://nightly53-1.ent.cloudera.com:7180/api/v6/clusters/Cluster%201/services/SOLR-1" | grep -B 1 "type.....SOLR" | grep name | awk '{print $3}' | sed "s/[\",]//g"
+
+
+
+Call restart of each, or give a list of the roles
+https://cloudera.github.io/cm_api/apidocs/v9/path__clusters_-clusterName-_services_-serviceName-_roleCommands_restart.html
+
+
+
+Thanks,
+Miklos
+
+
+On Thu, Mar 5, 2015 at 4:29 PM, Jeongho Park <jeongho@cloudera.com> wrote:
+Siri wants to rolling restart Solr servers after doing some pre-check for each server.
+
+
+CM doesn't have rolling restart option for Solr Service. Also, CM API does not have this level of granularity but at the service level.
+http://cloudera.github.io/cm_api/apidocs/v9/path__clusters_-clusterName-_services_-serviceName-_commands_restart.html
+
+
+
+Do we have any hidden API for this control at each machine level by any chance?
+
+
+TIA,
+Jeongho ParkCloudera | jeongho@cloudera.com | 650.483.1107
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME Eng Enterprise" group.
+
+
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-eng-enterprise/CAL_a0ompZZq5RO%3DQbeHjes%3DPOZRqXX_Fq5g7LdEe75v3VdKGSQ%40mail.gmail.com.
+
+
+
+
+
+

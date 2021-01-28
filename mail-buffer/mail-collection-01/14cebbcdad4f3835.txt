@@ -1,0 +1,29 @@
+Hi, Bhavuk -
+
+On Fri, Apr 24, 2015 at 1:27 AM, Bhavuk Chawla <bchawla@xebia.com> wrote:
+Hi All
+
+
+
+I got a query in Admin Course about how to change default installation paths of RPM files.
+
+
+
+That's a Linux question, and not directly relevant to Hadoop - but more importantly, it's one that implies incorrect thinking. If you change the installation paths, then you'll be breaking the (reasonable) assumptions made by all the software that uses those default paths. It's a bad idea in general - and it's a very bad idea once you start installing software that uses the system as extensively as Hadoop does.
+
+
+
+It may be worthwhile to ask the student why he thinks this would be a good idea. Often, you can get at the root of the misunderstanding and fix it. (Contrariwise, it's important not to get dragged off into discussing endless fiddly details of infrastructure; the only reasonable assumption here is that everything is standardized, and fiddling will break things.)
+
+
+
+
+Regards,
+
+-- 
+Ben Okopnik
+Senior Instructor, Cloudera
+
+
+
+

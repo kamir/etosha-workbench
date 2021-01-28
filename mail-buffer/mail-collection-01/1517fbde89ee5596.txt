@@ -1,0 +1,22 @@
+Hi All
+I have 4 node cluster which is manually created using command line with the help of CDH packages (reference to our old Admin module exercise). Is it possible now to make this cluster access using CM (Cloudera Manager) mean this cluster should be monitored and administered using Cloudera manager. Kindly help.
+ 
+Best Regards
+Pilla Sai Kumar
+Asst. Technical Manager | Big Data Hadoop
+ 
+
+ 
+Koenig Solutions Limited
+ 
+2nd Floor, KLJ Complex-II,
+Plot No. 70, Opp. Police Station, Moti Nagar,
+New Delhi – 110 015, India
+ 
+Mob:  +91 8130798751, 7838266829
+Skype: sai.kumar2208
+Web: www.koenig-solutions.com
+ 
+       
+ 
+

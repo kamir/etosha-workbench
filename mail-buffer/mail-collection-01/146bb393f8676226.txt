@@ -1,0 +1,30 @@
+
+    [ https://issues.apache.org/jira/browse/GIRAPH-877?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&focusedCommentId=14039403#comment-14039403 ] 
+
+Maja Kabiljo commented on GIRAPH-877:
+-------------------------------------
+
+How does this compare with SimplePageRankComputation from giraph-examples and why should we have both?
+
+> pagerank application on giraph
+> ------------------------------
+>
+>                 Key: GIRAPH-877
+>                 URL: https://issues.apache.org/jira/browse/GIRAPH-877
+>             Project: Giraph
+>          Issue Type: New Feature
+>         Environment: This patch has implementations for pagerank, residual pagerank, weightedpagerank & residualweightedpagerank.
+> Tests are also provided. mvn clean verify works.
+>            Reporter: Pavan Kumar
+>            Assignee: Pavan Kumar
+>         Attachments: pagerank.patch
+>
+>
+
+
+
+
+--
+This message was sent by Atlassian JIRA
+(v6.2#6252)
+

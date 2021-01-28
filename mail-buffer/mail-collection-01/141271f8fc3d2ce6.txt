@@ -1,0 +1,101 @@
+For me the best piece of advice, hard-won from my own days in hardware pre-sales support (and teaching performances classes on Solaris and HotSpot JVMs) is this:
+
+* Do not give performance numbers. 
+
+
+
+The video says "be last," or at least do not be first, as those numbers become a target to beat. Any salesperson hungry to make their numbers will beat them -- it hardly matters if the playing field they provide is real or fictional.
+
+
+
+More importantly, numbers _always_ get removed from context -- configuration, hardware class, networking (if appropriate), workload -- they all point to a very specific stack, and performance is always, always, always tied to the workload used. Always.
+
+
+
+If I write always four times in a row it's because anxious students in a performance-oriented class will try every hour to get numbers, which they call evidence or even proof of your product's viability. Even right after I say there is no such thing as a performance measurement in which a specific workload and configuration is somehow irrelevant. There is also no such thing as a general case that is applicable to a class of workloads. In my oh-so-humble view, this includes benchmarks. 
+
+
+
+So an additional two cents coming from no one in particular: this is great advice. It's not about being cagey, it's just awareness that your customer will try to put you in a position where, as a product advocate, you can only lose. They're not usually trying to do exactly that, but that's what it amounts to.
+
+
+
+FWIW,
+
+
+Michael
+
+
+
+On Fri, Sep 13, 2013 at 10:23 AM, Mark Morrissey <mark@cloudera.com> wrote:
+
+https://cloudera.webex.com/cloudera/ldr.php?AT=pb&SP=MC&rID=126326097&rKey=200e9eb4cbd93397
+
+
+
+
+To quote Nate Neff:
+
+
+"... this is a really good, high-level look at how to handle benchmarking/performance
+related customer questions.  I've been thrown a few curveballs by students (although they're few
+
+
+
+and far between).  
+
+
+The video is 15 minutes, and has some great high-level points, as well as pointers to the
+int-performance mailing list.  It was a good presentation, and it's worth the 15 minutes to
+
+
+
+
+watch.
+
+
+The presenter, Yanpei Chen is a good speaker, and he highlights great points how to point out
+why Cloudera and our products are top-notch and how to deal with "bake-offs" and other geeky
+
+
+
+
+numbers games that are played by competitors...."
+
+
+
+
+
+
+
+
+-- 
+Mark Morrissey
+
+Cloudera
++1.720.237.0866 | mark@cloudera.com | skype:  mark_morrissey
+
+
+http://university.cloudera.com/
+
+
+
+
+
+
+
+
+
+To unsubscribe from this group and stop receiving emails from it, send an email to actp_instructors+unsubscribe@cloudera.com.
+
+
+
+
+
+
+
+-- 
+Michael Ernest
+Inkling Research, Inc.
+
+

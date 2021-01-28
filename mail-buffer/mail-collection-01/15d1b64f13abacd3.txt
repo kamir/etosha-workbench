@@ -1,0 +1,276 @@
+Basically, pens vs pencils.
+
+--
+Matt Brandwein
+Director, Products | Cloudera
+matt@cloudera.com
++1.617.744.9294
+
+
+
+
+
+
+On Jul 6, 2017, at 1:05 PM, Jason Hubbard <jason.hubbard@cloudera.com> wrote:
+
+
++1 Advantage to CDSW.
+
+There is another interesting conversation on governance in CDSW.  Having the history like Marty suggested could be beneficial in this area as well, you can easily go back and see how results have changed over time, either based on changes in data or changes in code.  If you are really prudent, you could even mark when you made changes in the output so you know why the results changed (ie added this file to result or committed this change to version control).
+
+On Thu, Jul 6, 2017 at 3:46 PM Marty Lurie <marty@cloudera.com> wrote:
+
+
+  
+    
+  
+  
+    I would disagree with:  "In the CDSW, we prefer to clear and rerun
+    all the script as a plain report."  
+
+    
+
+    I highlight sections of the code and re-run them, for example
+    changing the number of clusters in a k-means analysis.  
+
+    
+
+    We have an advantage over notebooks - our session saves all the
+    output so you can see what happened and how you got to the final
+    analysis.  Notebooks overwrites this history.  
+
+    
+
+    An example of a session from CDSW, with two runs of kmeans is
+    attached.  Notice the two iterations of the kmeans and the graph are
+    in the session.  Notebooks doesn't do this unless you make copies of
+    the code blocks.
+
+    
+
+    ADVANTAGE CDSW :-)
+
+    
+
+    
+
+    --
+Marty
+--
+Marty Lurie, Systems Engineer, marty@cloudera.com  cell: (617) 797 3138
+
+
+    On 07/06/2017 01:18 PM, Mael Ropars
+      wrote:
+
+    
+
+    
+      Hi guys,
+        
+
+        
+
+        during my two last demoes I got a specific question
+          comparing our CDSW with notebooks.
+
+          The scientist explained that in normal notebooks, they are
+          capable to replay parts of the code or refresh portions of the
+          graphic displayed (in frames I think).
+
+        In the CDSW, we prefer to clear and rerun all the script as
+          a plain report.
+
+        
+
+        
+
+        Could anyone with experience in notebooks clarify this
+          comparison and help me to give the right answer ?
+
+        
+
+        
+
+        Thanks
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            
+                              
+                                --
+
+                                  	
+                                          	
+                                                  	Mael
+                                                          Ropars |
+                                                          Sales Engineer
+	t. +33 6
+                                                          30 93 25 22 e. mropars@cloudera.com
+	cloudera.com
+
+
+                                                
+	
+                                                  	
+                                                          
+                                                          	
+                                                          	
+                                                          	
+
+
+                                                          
+
+
+                                                          
+
+
+                                                          
+
+                                                           
+                                                          
+                                                          	
+                                                          	
+                                                          	
+                                                          			
+
+
+                                                          
+
+
+                                                          
+
+
+                                                          
+
+
+                                                          
+
+                                                        
+
+
+                                                
+	
+                                                  	
+                                                          
+
+
+
+                                                
+
+
+                                          
+
+                                        
+
+
+                                
+
+                              
+
+                            
+
+                          
+
+                        
+
+                      
+
+                    
+
+                  
+
+                
+
+              
+
+            
+
+          
+
+        
+
+      
+
+      -- 
+
+      You received this message because you are subscribed to the Google
+      Groups "SE Specialization - Data Science & Data Engineering"
+      group.
+
+      To unsubscribe from this group and stop receiving emails from it,
+      send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+      To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+      Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+      To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAFUohomTH8ZoaNPnJG5uTxN%2BZSJMs7R%3DJOtpofKtjsTYEcdjig%40mail.gmail.com.
+
+    
+
+    
+
+  
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/4756d476-0f14-26af-f320-64a7543b3351%40cloudera.com.
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAKuwjVuBQD_qk_b_kiEOV5oAtdQ3ox6UD1kfn1Qcc9%2B2ucngGw%40mail.gmail.com.
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/5A970B67-DCD2-4737-BA83-C1AFB6145A3B%40cloudera.com.
+

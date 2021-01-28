@@ -1,0 +1,192 @@
+Mike/Steven - thanks for the additional info. Very useful. 
+
+On Wed, Mar 11, 2015 at 1:52 PM, Steven Ross <sross@cloudera.com> wrote:
+A couple more reasons to use HDFS encryption for encrypting data in HDFS (in addition to what Mike listed below):	Performance in most cases will be superior - for example write operations with 0-2% encryption impact (we have taken advantage of existing buffering/wait times in HDFS)
+	Navigator Encrypt depends on Linux kernel support; newer versions of Linux can alter the functionality we're able to deliver.  For example in RHEL 7, Navigator Encrypt will have restricted encryption options, making it more challenging to deploy in some cases.  
+
+We understand that customers with very sophisticated security teams - such as as few large financial services company and some government agencies, will want to carefully examine all the encryption options, which is fine.   We just want to lead with a clear recommendation that enables the majority of customers to skip an extended evaluation period and move more quickly toward production implementation.  
+
+
+
+Reminder: HDFS Encryption should always be used with Navigator Key Trustee as the production and compliance ready key manager, which differentiates our solution from competitors.
+
+
+On Wed, Mar 11, 2015 at 1:35 PM, Michael Yoder <myoder@cloudera.com> wrote:
+Isn't the recommendation to use HDFS encryption for encrypting HDFS data and then Navigator Encrypt for metadata/logs/etc a bit broad. It's my understanding that it's a perfectly valid pattern to use Navigator Encrypt to encrypt the HDFS data dirs as well as metadata/logs/etc if they just want blanket encryption. Then if they can get away with just picking and choosing which HDFS data is encrypted, then HDFS encryption is the answer.
+
+
+
+
+That is a valid pattern, but there are also reasons that it's not the recommendation. :-)
+ 
+If someone wants all HDFS data encrypted, then is there any benefit to doing this with HDFS Encryption vs Navigator Encrypt (other than the potential for having different keys for different HDFS users/tenants)?
+
+
+
+
+Yes. 
+	The ability to prevent the hdfs user from gaining access to HDFS file contents
+	Different keys for different tenants (as you named above)
+
+	Protection from users at the OS layer.  What I mean by this is that with HDFS encryption, the OS does not have keys to encrypt the data, and so the data is safe from attacks "below" HDFS. Encryption is always more secure the higher up in the stack that it is implemented.
+
+-Mike
+
+
+
+
+
+ 
+
+
+Thanks,
+Justin
+
+
+On Tue, Mar 10, 2015 at 8:57 PM, Steven Ross <sross@cloudera.com> wrote:
+Refer to the Encryption Info product wiki for the latest info on these solutions.   The recommendation there is to use HDFS encryption for encrypting data in HDFS and Navigator Encrypt only for encrypting metadata - so in your case, the Oracle database - assuming the customer doesn't already have Oracle transparent encryption (TDE) enabled for that database. 
+
+Is there a specific reason, or a customer request, to encrypt something else?
+
+
+
+
+On Tue, Mar 10, 2015 at 6:10 PM, Michael Riggs <michael.riggs@cloudera.com> wrote:
++Coe-security
+
+
+
+Michael Riggs
+
+515 Congress Ave
+
+Suite 1450
+
+Austin, TX 78701
+
+(512)751-7093
+
+michael.riggs@cloudera.com
+
+
+
+> On Mar 10, 2015, at 5:55 PM, Benjamin Vera-Tudela <bveratudela@cloudera.com> wrote:
+
+>
+
+> I am working with a customer (a bank) were he have enabled HDFS encryption along with Kerberos, Sentry, and soon will be enabling SSL/TLS Level 1 or 3.
+
+>
+
+> This customer is running an Oracle backend for CM, Hue, Oozie, and Navigator metadata on a host dedicated exclusively for the DB (i.e., no other CM/CDH services running on it).
+
+>
+
+> Questions:
+
+>
+
+> 1) What have others recommended encrypting with Navigator Encrypt? Do we recommend for example encrypting /var/run, /etc/hadoop?
+
+>
+
+> 2) Does it make sense to encrypt the DataNode dirs, NameNode dir, JournalNode dirs, or ZK dirs if HDFS encrypt is enabled?
+
+>
+
+> 3) Has anyone recommended or done any encryption of Oracle-related dirs/files?
+
+>
+
+>
+
+> --
+
+> Benjamin Vera-Tudela
+
+> Solutions Architect
+
+> Phone: (512) 308-8993
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Steve Ross
+Senior Product Manager
+sross@cloudera.com
+650-468-1194
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Justin HayesSr. Systems Engineer
+www.cloudera.com
+202.669.3567 (mobile)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Steve Ross
+Senior Product Manager
+sross@cloudera.com
+650-468-1194
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Justin HayesSr. Systems Engineer
+www.cloudera.com
+202.669.3567 (mobile)
+
+
+
+
+
+
+

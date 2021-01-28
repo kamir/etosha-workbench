@@ -1,0 +1,56 @@
+<p dir="ltr">And that is just one reason we didn&#39;t recommend Oracle to CS ;)</p>
+<div class="gmail_quote">---------- Forwarded message ----------<br>From: &quot;Todd Grayson&quot; &lt;<a href="mailto:tgrayson@cloudera.com">tgrayson@cloudera.com</a>&gt;<br>Date: Jul 14, 2016 9:43 AM<br>Subject: Re: Oracle Permissions<br>To: &quot;Mark Samson&quot; &lt;<a href="mailto:msamson@cloudera.com">msamson@cloudera.com</a>&gt;, &quot;<a href="mailto:fce@cloudera.com">fce@cloudera.com</a>&quot; &lt;<a href="mailto:fce@cloudera.com">fce@cloudera.com</a>&gt;<br>Cc: &quot;SME Enterprise&quot; &lt;<a href="mailto:sme-enterprise@cloudera.com">sme-enterprise@cloudera.com</a>&gt;<br><br type="attribution"><div dir="ltr">The parent Jira is here, please list your customers/pre-sales/post-sales customers sites that are complaining about this.<div><br></div><div><a href="https://jira.cloudera.com/browse/SEC-19" style="color:rgb(59,115,175);font-family:Arial,sans-serif;font-size:14px;line-height:20px;white-space:nowrap" target="_blank">SEC-19</a> - <a href="https://jira.cloudera.com/browse/SEC-19" style="color:rgb(59,115,175);font-family:Arial,sans-serif;font-size:14px;line-height:20px;background-color:rgb(245,245,245)" target="_blank">Do The Platform Databases Need to Support Separation of Schema access from service accounts?</a><br></div><div><br></div><div>Mark I&#39;ve linked the case you mentioned to this.</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Jul 14, 2016 at 1:49 AM, Mark Samson <span dir="ltr">&lt;<a href="mailto:msamson@cloudera.com" target="_blank">msamson@cloudera.com</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Hi CM team (I think this is the right alias)<div><br></div><div>DB&#39;s security team are objecting to certain Oracle permissions that (the docs say) we require for the CM databases. See the email below. Can you help with this query?</div><div>They have been able to install CM and CDH without granting these permissions, but in the support case (100989) and the JIRA SEC-19 it is stated that these are needed because CM services run dynamic DDL on startup. Can you confirm if these specific permissions are really needed by that dynamic DDL?</div><div><br></div><div>Let me know if I should raise a JIRA for this. I haven&#39;t yet, because right now it is just an investigation as to whether the permissions are needed. If they are needed, I will open a feature request to remove the requirement.</div><div><br></div><div>Thanks.<br clear="all"><div><div data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><br><div>Regards,</div><div><br></div><div>Mark Samson</div><div>Principal Systems Engineer, Cloudera</div><div><a href="mailto:msamson@cloudera.com" target="_blank">msamson@cloudera.com</a></div><div><a href="tel:%2B44%20%280%29%207500%20448621" value="+447500448621" target="_blank">+44 (0) 7500 448621</a></div><div><br></div><div><table style="font-family:Times"><tbody><tr><td width="80"><img src="http://files.cloudera.com.s3.amazonaws.com/email-imgs/2016/hadoop10.png"></td><td width="420" style="font-family:Helvetica,arial,sans-serif;font-size:13px;color:rgb(102,102,102);line-height:18px">Celebrating a decade of community accomplishments<br><a href="http://cloudera.com/hadoop10" style="color:rgb(0,89,132);text-decoration:none" target="_blank">cloudera.com/hadoop10</a><br>#hadoop10</td></tr></tbody></table></div></div></div></div></div></div></div></div></div></div>
+<br><div class="gmail_quote">---------- Forwarded message ----------<br>From: <b class="gmail_sendername">Fred Sosa</b> <span dir="ltr">&lt;<a href="mailto:fred.sosa@db.com" target="_blank">fred.sosa@db.com</a>&gt;</span><br>Date: Tue, Jul 12, 2016 at 5:19 PM<br>Subject: Oracle Permissions<br>To: Mark Samson &lt;<a href="mailto:msamson@cloudera.com" target="_blank">msamson@cloudera.com</a>&gt;<br>Cc: Madhavi Kota &lt;<a href="mailto:madhavi.kota@db.com" target="_blank">madhavi.kota@db.com</a>&gt;, Jordan Volz &lt;<a href="mailto:jordan.volz@cloudera.com" target="_blank">jordan.volz@cloudera.com</a>&gt;, James George &lt;<a href="mailto:james.george@db.com" target="_blank">james.george@db.com</a>&gt;, Prajwal Kumar &lt;<a href="mailto:prajwal.kumar@db.com" target="_blank">prajwal.kumar@db.com</a>&gt;, Satish Hatti &lt;<a href="mailto:satish.hatti@db.com" target="_blank">satish.hatti@db.com</a>&gt;<br><br><br>
+
+
+
+
+
+<div lang="EN-US" link="#0563C1" vlink="#954F72">
+<div>
+<p class="MsoNormal">Hi Mark,<u></u><u></u></p>
+<p class="MsoNormal"><u></u> <u></u></p>
+<p class="MsoNormal">We have been working with Cloudera support to understand the needed permissions for CDH.  We also have permissions internally that cannot be granted.<u></u><u></u></p>
+<p class="MsoNormal">The permissions in conflict with Cloudera support/CDH documentation as they relate to our security standards for database permissions are the following, where “***_OWNER” applies for the associated CDH user/schemas:<u></u><u></u></p>
+<p class="MsoNormal"><span style="color:#1f497d"><u></u> <u></u></span></p>
+<p><u></u><span style="color:#1f497d"><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span></span><u></u><span style="color:#1f497d">GRANT SELECT ANY DICTIONARY TO ***_OWNER;<u></u><u></u></span></p>
+<p><u></u><span style="color:#1f497d"><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span></span><u></u><span style="color:#1f497d">GRANT CREATE DATABASE LINK TO ***_OWNER;<u></u><u></u></span></p>
+<p><u></u><span style="color:#1f497d"><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span></span><u></u><span style="color:#1f497d">GRANT CREATE PROCEDURE TO USER ***_OWNER;<u></u><u></u></span></p>
+<p><u></u><span style="color:#1f497d"><span>4.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span></span><u></u><span style="color:#1f497d">GRANT ALTER DATABASE LINK TO USER ***_OWNER;<u></u><u></u></span></p>
+<p class="MsoNormal"><u></u> <u></u></p>
+<p class="MsoNormal">We have been able to install CDH <i><u>without</u></i> the above permissions.<u></u><u></u></p>
+<p><u></u><span>1.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span><u></u>Are the above permission really needed?<u></u><u></u></p>
+<p><u></u><span>2.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span><u></u>Are they only needed for installation purposes (though we were able to install CDH anyway)?<u></u><u></u></p>
+<p><u></u><span>3.<span style="font:7.0pt &quot;Times New Roman&quot;">      
+</span></span><u></u>Are they needed for execution?<u></u><u></u></p>
+<p class="MsoNormal"><u></u> <u></u></p>
+<p class="MsoNormal">If they are needed we would need to request a change so it is not needed.  Can you follow up on this as the above permissions are not allowed by our security policy and this is blocking us for production rollout.
+<u></u><u></u></p>
+<p class="MsoNormal">The Cloudera Case # is  “100989: Database Permissions”<u></u><u></u></p>
+<p class="MsoNormal"><u></u> <u></u></p>
+<p class="MsoNormal">Thanks,<u></u><u></u></p>
+<p class="MsoNormal"><u></u> <u></u></p>
+<p class="MsoNormal"><img width="219" height="263" src="cid:image001.jpg@01D1DC36.145D0440" alt="signature_07"><u></u><u></u></p>
+<p class="MsoNormal"><u></u> <u></u></p>
+</div>
+<br>
+<font face="Arial" color="Black" size="3"><br>
+---<br>
+This communication may contain confidential and/or privileged information. If you are not the intended recipient (or have received this communication in error) please notify the sender immediately and destroy this communication. Any unauthorized copying, disclosure
+ or distribution of the material in this communication is strictly forbidden.<br>
+<br>
+Deutsche Bank does not render legal or tax advice, and the information contained in this communication should not be regarded as such.<br>
+</font>
+</div>
+
+</div><br></div></div>
+</blockquote></div><br><br clear="all"><div><br></div>-- <br><div data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr">Todd Grayson</div><div dir="ltr">Business Operations Manager<br><div>Customer Operations Engineering</div><div>Security SME</div><div><img src="http://files.cloudera.com.s3.amazonaws.com/New%20Branding/cloudera-small.png"><br></div></div></div></div></div></div></div>
+</div>
+</div>
+

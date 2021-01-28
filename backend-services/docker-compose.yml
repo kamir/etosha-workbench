@@ -1,0 +1,117 @@
+version: '3.3'
+
+services:
+
+
+  lb:
+    image: nginx:alpine
+    ports:
+     - "80:80"
+    volumes:
+      - type: volume
+        source: nginx_data
+        target: /data
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./static
+        target: /opt/app/static
+
+# OK
+  redis:
+    image: "redis:alpine"
+    ports:
+    - "6379:6379"
+
+# OK    
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+
+# OK    
+  solr:
+    image: "solr"
+    ports:
+    - "8983:8983"  
+
+# OK    
+  fuseki:
+    image: "stain/jena-fuseki"
+    ports:
+     - "3030:3030"
+
+# OK     
+  neo4j:
+    image: "neo4j"
+    ports:
+    - "7474:7474"
+    - "7687:7687"
+    
+# OK    
+  activemq:
+    image: "rmohr/activemq"
+    ports:
+    - 1818
+    - "11883:1883"
+    - "61616:61616"
+
+# OK - name of WAR file determines the "URL" if no context is defined in WEB-INF
+  tomcat:
+    image: tomcat
+    volumes:
+    - type: bind
+      source: /GITHUB.cloudera.internal/NeuralCrawler/BAG_STAGE/WEB_APP/out/artifacts/WEB_APP_war/
+      target: /usr/local/tomcat/webapps
+    ports:
+    - "9090:8080"  
+    
+  kapua-elasticsearch:
+    image: "elasticsearch:5.4.0"
+    ports:
+     - "9200:9200"
+     - "9300:9300" 
+    environment: 
+    - cluster.name=kapua-datastore 
+    - discovery.type=single-node 
+    - transport.host=_site_ 
+    - transport.ping_schedule=-1 
+    - transport.tcp.connect_timeout=30s  
+    
+  kapua-broker:
+    image: "kapua/kapua-broker"
+    ports:
+     - "1883:1883" 
+     - "61614:61614"  
+    
+  kapua-sql:
+    image: "kapua/kapua-sql"
+    ports:
+     - "8181:8181"
+     - "3306:3306"  
+    
+  kapua-console:
+    image: "kapua/kapua-console"
+    ports:
+     - "7070:8080"  
+
+  kapua-api:
+    image: "kapua/kapua-api"
+    ports:
+     - "8081:8081" 
+
+volumes: 
+    nginx_data:
+    
+    
+
+    
+#docker run -td --name kapua-sql -p 8181:8181 -p 3306:3306 kapua/kapua-sql
+#docker run -td --name kapua-broker --link kapua-sql:db --link kapua-elasticsearch:es -p 1883:1883 -p 61614:61614 kapua/kapua-broker
+#docker run -td --name kapua-elasticsearch -p 9200:9200 -p 9300:9300 elasticsearch:5.4.0 -Ecluster.name=kapua-datastore -Ediscovery.type=single-node -Etransport.host=_site_ -Etransport.ping_schedule=-1 -Etransport.tcp.connect_timeout=30s
+#docker run -td --name kapua-console --link kapua-sql:db --link kapua-broker:broker --link kapua-elasticsearch:es -p 8080:8080 kapua/kapua-console
+#docker run -td --name kapua-api --link kapua-sql:db --link kapua-broker:broker --link kapua-elasticsearch:es -p 8081:8081 kapua/kapua-api
+
+
+    
+  

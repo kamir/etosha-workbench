@@ -1,0 +1,105 @@
+Thanks Eva!
+
+The customer's original question was specifically about having multiple instances of Lily - do we have any idea how many HBase transactions a single Lily indexer can handle?  Or is Lily unlikely to be the bottleneck?
+
+
+
+
+
+
+-- Ben WhiteSystems Engineer
+Cloudera, Inc
+310-908-0600
+
+
+
+
+
+
+
+On Mon, Aug 18, 2014 at 11:48 AM, Eva Andreasson <eva@cloudera.com> wrote:
+
+
+Solr sizing is pending on 1) data ingest rate 2) what part of the data you need to search over and what questions you plan to serve (index schema) 3) SLAs expected on response times and indexing completion time
+
+
+
+
+
+A lot of good info is collected here: https://cloudera.app.box.com/files/0/f/946449307/2013_Solr_videos
+
+
+
+
+
+
+On sizing particularly check out the sizing form.
+
+
+It basically comes down to:
+* continuously increase data ingest for _one node of solr_ of the sample data using the index schema you plan to use
+
+
+
+
+* see where the node fails to serve indexing or query SLAs
+* extrapolate from there to how many nodes you need for a given expected ingest rate, e.g. do the math...
+
+
+Erick Erickson can help. There is also a performance guide in SFDC that you can read.
+
+
+
+
+
+
+/Eva
+
+
+
+On Fri, Aug 15, 2014 at 6:03 PM, Ben White <bwhite@cloudera.com> wrote:
+
+
+
+
+IHAC with a question about the Lily indexer, specifically what you gain by having multiple instances.
+
+
+
+
+
+
+The Lily wiki (https://github.com/NGDATA/hbase-indexer/wiki) mentions that indexing work "is shared over all machines in the cluster", but do we have any information (or even ballpark numbers) to estimate how many indexers you need for a given workload?
+
+
+
+
+
+
+
+-- Ben WhiteSystems Engineer
+Cloudera, Inc
+310-908-0600
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

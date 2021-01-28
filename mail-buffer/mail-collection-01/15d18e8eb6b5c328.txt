@@ -1,0 +1,78 @@
+Hi guys,
+
+during my two last demoes I got a specific question comparing our CDSW with notebooks.
+The scientist explained that in normal notebooks, they are capable to replay parts of the code or refresh portions of the graphic displayed (in frames I think).
+In the CDSW, we prefer to clear and rerun all the script as a plain report.
+
+
+Could anyone with experience in notebooks clarify this comparison and help me to give the right answer ?
+
+
+Thanks
+
+--
+			Mael Ropars | Sales Engineer
+	t. +33 6 30 93 25 22 e. mropars@cloudera.com
+	cloudera.com
+
+
+					
+
+
+
+
+
+
+ 						
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAFUohomTH8ZoaNPnJG5uTxN%2BZSJMs7R%3DJOtpofKtjsTYEcdjig%40mail.gmail.com.
+

@@ -1,0 +1,220 @@
++SME CDSW
+ 
+Dan Flavin | System Engineer
+Cloudera, Inc.
+
+847.650.2006
+danf@cloudera.com
+
+ 
+ 
+From: Matt Harris <mharris@cloudera.com>
+Date: Tuesday, August 15, 2017 at 2:24 PM
+To: Dan Flavin <danf@cloudera.com>, Scott Crawford <scrawford@cloudera.com>
+Subject: Fwd: Cloudera/General Mills monthly connect - extended discussion
+
+ 
+
+Hi Dan/Scott
+
+ 
+
+I have a call scheduled to go over a few CDSW questions with General Mills tomorrow.  In preparation, they sent me a few specific questions.  I have reached out to Tristan regarding the BTRFS and Status 128 questions below but was hoping one of you may have some insights into their last question which specifically is about the ability to expose a listening port for a container with a dyamic port on the physical host.  They would like to use this as a callback for H2O where the driver (running in a CDSW container) initiates a connection to the Hadoop cluster and kicks off a h2O cluster. That cluster then tries to call back into the container, but ultimately fails because of the port mapping behavior with docker.
+
+ 
+
+Do you know if this is possible or if this is a question better suited to the broader CDSW Engineering/SME team?
+
+ 
+
+Regards,
+ 
+
+Matt Harris
+
+Director, Strategic Systems Engineering
+
+mharris@cloudera.com
+
+M   219.921.3063
+
+300 S. Wacker Drive, Suite 1720 | Chicago, IL  |   60606
+
+ 
+
+	
+	Celebrating a decade of community accomplishments
+cloudera.com/hadoop10
+#hadoop10
+
+
+
+
+
+
+
+
+
+
+
+ 
+---------- Forwarded message ----------
+From: Jon Benning <Jon.Benning@genmills.com>
+Date: Tue, Aug 15, 2017 at 2:06 PM
+Subject: RE: Cloudera/General Mills monthly connect - extended discussion
+To: Matt Harris <mharris@cloudera.com>, Reshu Yadav <Reshu.Yadav@genmills.com>
+Cc: "mbrandwein@cloudera.com" <mbrandwein@cloudera.com>, Todd Mensch <Todd.Mensch@genmills.com>, Mark Zuchowski <Mark.Zuchowski@genmills.com>, Renee Murray <Renee.Murray@genmills.com>
+
+
+Hi, I’m on the Linux team at GMI.
+ 
+Regarding the status 128 errors, there is very little diagnostics outside of “status 128” – but we do get some errors indicating there are too many levels of symbolic links on the mount point once the issue occurs. Simply restarting autofs on all the hosts in the cluster seems to clear the problem for a while. We think the issue is a bug in docker and autofs: https://github.com/moby/moby/issues/24303
+ 
+For the callback bit, basically Reshu’s team would like to be able to expose a listening port for a container with a dynamic port on the physical host. In the case of H20, it’s a callback port where the driver (running in a CDSW container) initiates a connection to the Hadoop cluster and kicks off a h2O cluster. That cluster then tries to call back into the container, but ultimately fails because of the port mapping behavior with docker.
+ 
+I’ll let Todd commend on the BTRFS question, but I think we’re planning on migrating to EXT4 per Cloudera support. Ideally CDSW would cease to deploy BTRFS at install time.
+ 
+Regards,
+Jon Benning
+ 
+From: Matt Harris [mailto:mharris@cloudera.com] 
+Sent: Tuesday, August 15, 2017 1:55 PM
+To: Reshu Yadav <Reshu.Yadav@genmills.com>
+Cc: mbrandwein@cloudera.com; Todd Mensch <Todd.Mensch@genmills.com>; Jon Benning <Jon.Benning@genmills.com>; Mark Zuchowski <Mark.Zuchowski@genmills.com>; Renee Murray <Renee.Murray@genmills.com>
+Subject: Re: Cloudera/General Mills monthly connect - extended discussion
+
+
+ 
+EXTERNAL EMAIL: 
+
+Reshu
+
+ 
+
+Thank you for the agenda details.  For preparation sake, I have a few questions:
+
+·         Is there a case number with support for the BTRFS issue you experienced?
+·         Can you provide a little more context on the status 128 error you experienced?
+·         We will need to dig into your question about callbacks tomorrow so I can better understand how you are trying to use this capability
+If 30 minutes is not enough time, we can schedule a follow-on discussion.
+
+ 
+
+Matt
+
+
+
+
+
+ 
+
+Regards, 
+ 
+
+Matt Harris
+
+Director, Strategic Systems Engineering
+
+mharris@cloudera.com
+
+M   219.921.3063
+
+300 S. Wacker Drive, Suite 1720 | Chicago, IL  |   60606
+
+ 
+
+	
+	Celebrating a decade of community accomplishments
+cloudera.com/hadoop10
+#hadoop10
+
+
+
+
+
+
+
+
+
+
+
+ 
+On Tue, Aug 15, 2017 at 1:43 PM, Reshu Yadav <Reshu.Yadav@genmills.com> wrote:
+Hi Matt,
+
+ 
+
+In the agenda for this month’s connect, we have quite a few items identified. So I am guessing 30 minutes may not be enough. We can discuss the first few functionality related agenda items in the first meeting and use this extended invite for very specific technical issues/feature requests. I have invited only core members from GMI who need to be part of this detailed technical discussion, but please feel free to extend the invite to anyone else from Cloudera as you deem required.
+
+ 
+
+The specific items we want to cover in this meeting:
+
+1.       Discuss options for configuring ports in CDSW containers for callback messages from hadoop mappers back to driver programs (like H2O) running within the container
+2.       Discuss the btrfs file system issue, which brought down GMI CDSW production for ~13 hours on 8/8 – need some visibility on roadmap of when the move away from this filesystem is planned
+3.      Discuss diagnostics behind the error with status 128 
+Hope the time works for you. Thank you.
+
+Regards,
+
+Reshu
+
+ 
+
+ 
+
+.........................................................................................................................................
+
+à Join Skype Meeting     
+
+Trouble Joining? Try Skype Web App 
+
+ 
+
+ 
+
+Help  |Legal 
+
+ 
+
+ 
+
+Please note: A unique link is generated for each Skype meeting to ensure only the people who are invited to the meeting are able to join. External participants and those who have been forwarded the meeting invitation will be held in the lobby, and may be admitted by any General Mills employee. 
+
+[!OC([1033])!]
+
+.........................................................................................................................................
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+CAUTION: This email originates from outside of General Mills.  Please consider carefully whether you should click on any link, open any attachment, or provide any information.  For information regarding suspicious emails and what to do if you receive one, please visit http://go/security 
+
+
+
+ 
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/916F5334-1FB2-4B95-BC4C-914B7DFC0565%40cloudera.com.
+

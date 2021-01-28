@@ -1,0 +1,735 @@
+<%23%23%23%23%23Michael+Ridley+%3Cmridley%40cloudera.com%3E___1463673425000___Re%3A+Strange+problem+when+running+Terasort+in+Encryption+Zone>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "154c49803ec67927" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1463673425000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "Best Pracrtice" , "Best Pracrtice/Encryption" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "154c9bc15c732731" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "FCE <fce@cloudera.com>" , "SME Enterprise <sme-enterprise@cloudera.com>" , "Luke Hebert <lhebert@cloudera.com>" , "Roderick Yao <roderick.yao@cloudera.com>" , "SME Security <sme-security@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Michael Ridley <mridley@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Strange problem when running Terasort in Encryption Zone" .
+
+<%23%23%23%23%23Ian+Wrigley+%3Cian%40cloudera.com%3E___1394803738000___Re%3A+How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394803738000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "IMPORTANT" , "Best Pracrtice/Performance" , "Best Pracrtice/Swapping Discussion" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144c0c819b447dac" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Cloudera Instructor Mailing List <actp_instructors@cloudera.com>" , "Michael Clarkson <michael.clarkson@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ian Wrigley <ian@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: How to avoid swapping?" .
+
+<%23%23%23%23%23Ben+White+%3Cbwhite%40cloudera.com%3E___1408150980000___Scaling+out+Lily%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147dc572de1760fa" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1408150980000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "CATEGORY_FORUMS" , "Best Pracrtice/Search" , "INBOX" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147dc572de1760fa" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Search Internal <int-search@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ben White <bwhite@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Scaling out Lily?" .
+
+<%23%23%23%23%23Nathan+Neff+%3Cnathan.neff%40cloudera.com%3E___1440553475000___Re%3A+Benchmarking+tools+for+Impala>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14f67a3ed28d686e" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1440553475000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "INBOX" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14f67ada248b5919" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "training-team <training-team@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Benchmarking tools for Impala" .
+
+<%23%23%23%23%23Mark+Morrissey+%3Cmark%40cloudera.com%3E___1379093004000___Fwd%3A+Hi+Training+team%2C>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14114385a369cc61" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1379093004000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "CATEGORY_FORUMS" , "IMPORTANT" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1411859e0c085b6c" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "actp_instructors <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Mark Morrissey <mark@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Fwd: Hi Training team," .
+
+<%23%23%23%23%23Benjamin+Okopnik+%3Cbokopnik%40cloudera.com%3E___1440595580000___Re%3A+Benchmarking+tools+for+Impala>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14f67a3ed28d686e" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1440595580000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14f6a30687bbb75b" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "training-team <training-team@cloudera.com>" , "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Benjamin Okopnik <bokopnik@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Benchmarking tools for Impala" .
+
+<%23%23%23%23%23Nathan+Neff+%3Cnathan.neff%40cloudera.com%3E___1430665915000___Re%3A+Pig+Best+Practices+Documentation>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14d1a4f5051bc081" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1430665915000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice" , "Data Analyst Training" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "IMPORTANT" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14d1a556ea15a256" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "training-team <training-team@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Pig Best Practices Documentation" .
+
+<%23%23%23%23%23Nathan+Neff+%3Cnathan.neff%40cloudera.com%3E___1430665514000___Fwd%3A+Pig+Best+Practices+Documentation>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14d1a4f5051bc081" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1430665514000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "Best Pracrtice" , "INBOX" , "Best Pracrtice/Performance" , "IMPORTANT" , "Data Analyst Training" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14d1a4f5051bc081" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "training-team <training-team@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Fwd: Pig Best Practices Documentation" .
+
+<%23%23%23%23%23Nathan+Neff+%3Cnathan.neff%40cloudera.com%3E___1379039830000___Re%3A+Hi+Training+team%2C>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14114385a369cc61" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1379039830000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "141152de4a5957fd" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Jeff Bean <jwfbean@cloudera.com>" , "Training Team <training-team@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Hi Training team," .
+
+<%23%23%23%23%23%22Gianluca+Righetto+%28JIRA%29%22+%3Cjira%40apache.org%3E___1405792478000___%5Bjira%5D+%5BUpdated%5D+%28GIRAPH-931%29+Provide+a+Strongly+Connected+Components+algorithm>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1474fbb98e02e877" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1405792478000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "ASF Giraph" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "Best Pracrtice/Giraph Hints" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1474fc2fe75fa210" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "giraph-dev@incubator.apache.org" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "\"Gianluca Righetto (JIRA)\" <jira@apache.org>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "[jira] [Updated] (GIRAPH-931) Provide a Strongly Connected Components algorithm" .
+
+<%23%23%23%23%23Susan+Lauber+%3Csml%40laubersolutions.com%3E___1394808683000___Re%3A+How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394808683000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "Best Pracrtice/Swapping Discussion" , "IMPORTANT" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144c11383c9d9b17" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Ian Wrigley <ian@cloudera.com>" , "Cloudera Instructor Mailing List <actp_instructors@cloudera.com>" , "Michael Clarkson <michael.clarkson@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Susan Lauber <sml@laubersolutions.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: How to avoid swapping?" .
+
+<%23%23%23%23%23Michael+Ernest+%3Cmfernest%40inklingresearch.com%3E___1379340880000___Re%3A+Hi+Training+team%2C>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14114385a369cc61" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1379340880000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "IMPORTANT" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "141271f8fc3d2ce6" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "actp_instructors <actp_instructors@cloudera.com>" , "Mark Morrissey <mark@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Michael Ernest <mfernest@inklingresearch.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Hi Training team," .
+
+<%23%23%23%23%23%3D%3FUTF-8%3FB%3FTWlya28gS8OkbXBm%3F%3D+%3Cmirko.kaempf%40cloudera.com%3E___1405880000000___Re%3A+%5Bjira%5D+%5BUpdated%5D+%28GIRAPH-931%29+Provide+a+Strongly+Connected+Components+algorithm>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1474fbb98e02e877" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1405880000000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "SENT" , "Best Pracrtice/Performance" , "ASF Giraph" , "Best Pracrtice/Giraph Hints" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14754fa5f0625074" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "dev@giraph.apache.org" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "=?UTF-8?B?TWlya28gS8OkbXBm?= <mirko.kaempf@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: [jira] [Updated] (GIRAPH-931) Provide a Strongly Connected Components algorithm" .
+
+<%23%23%23%23%23Adam+Kawa+%3Ckawa.adam%40gmail.com%3E___1394803956000___Re%3A+How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394803956000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Performance" , "IMPORTANT" , "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/Swapping Discussion" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144c0cb5f3e3f007" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Cloudera Instructor Mailing List <actp_instructors@cloudera.com>" , "Michael Clarkson <michael.clarkson@cloudera.com>" , "Ian Wrigley <ian@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Adam Kawa <kawa.adam@gmail.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: How to avoid swapping?" .
+
+<%23%23%23%23%23%22Sergey+Edunov+%28JIRA%29%22+%3Cjira%40apache.org%3E___1407352096000___%5Bjira%5D+%5BCommented%5D+%28GIRAPH-931%29+Provide+a+Strongly+Connected+Components+algorithm>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1474fbb98e02e877" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1407352096000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Giraph Hints" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "ASF Giraph" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147acb8c8a88be95" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "giraph-dev@incubator.apache.org" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "\"Sergey Edunov (JIRA)\" <jira@apache.org>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "[jira] [Commented] (GIRAPH-931) Provide a Strongly Connected Components algorithm" .
+
+<%23%23%23%23%23Ian+Wrigley+%3Cian%40cloudera.com%3E___1425318429000___Re%3A+Benchmarking+Data>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14bd9d51f860f1e8" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1425318429000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "CATEGORY_FORUMS" , "Best Pracrtice/Configuration" , "IMPORTANT" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14bdb995f422e77e" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "\"actp_instructors@cloudera.com\" <actp_instructors@cloudera.com>" , "Raghavan Solium <raghavan.solium@osscube.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ian Wrigley <ian@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Benchmarking Data" .
+
+<%23%23%23%23%23Nathan+Neff+%3Cnathan.neff%40cloudera.com%3E___1392246298000___Sqoop+-+Throttle>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14428589ba113676" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1392246298000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/Performance" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14428589ba113676" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "training-team <training-team@cloudera.com>" , "Kathleen Ting <kathleen@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Sqoop - Throttle" .
+
+<%23%23%23%23%23Eva+Andreasson+%3Ceva%40cloudera.com%3E___1396371041000___Re%3A+Search+%2B+HBase>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1451e25ef5ed2cfc" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1396371041000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/HBase" , "Best Pracrtice/Search" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" , "INBOX" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1451e33823c6c003" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Search Internal <int-search@cloudera.com>" , "sme-coe-search <sme-coe-search@cloudera.com>" , "Jesse Anderson <jesse@cloudera.com>" , "Tom Wheeler <twheeler@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Eva Andreasson <eva@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Search + HBase" .
+
+<%23%23%23%23%23Kris+Geusebroek+%3Ckgeusebroek%40xebia.com%3E___1394788643000___Re%3A+How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394788643000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Swapping Discussion" , "INBOX" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144bfe1b8216ed65" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Martin Wang <martin.wang@analyticservice.net>" , "actp_instructors Mailing List <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Kris Geusebroek <kgeusebroek@xebia.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: How to avoid swapping?" .
+
+<%23%23%23%23%23Vikram+Srivastava+%3Cvikrams%40cloudera.com%3E___1425602856000___Re%3A+%5B%3F%5D+CM+API+for+restarting+Solr+at+server+level>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14bec8d4bcb4e37f" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1425602856000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Performance" , "Best Pracrtice/CM - Charts" , "INBOX" , "Best Pracrtice/Search" , "CATEGORY_FORUMS" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14bec8d4bcb4e37f" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "SME Eng Enterprise <sme-eng-enterprise@cloudera.com>" , "\"fce@cloudera.com\" <fce@cloudera.com>" , "sme-coe-enterprise <sme-coe-enterprise@cloudera.com>" , "Jeongho Park <jeongho@cloudera.com>" , "Search Internal <int-search@cloudera.com>" , "Miklos Christine <mwc@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Vikram Srivastava <vikrams@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: [?] CM API for restarting Solr at server level" .
+
+<%23%23%23%23%23Ben+White+%3Cbwhite%40cloudera.com%3E___1408388043000___Re%3A+Scaling+out+Lily%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147dc572de1760fa" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1408388043000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "INBOX" , "IMPORTANT" , "Best Pracrtice/Search" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147ea7862d03bb54" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Eva Andreasson <eva@cloudera.com>" , "Search Internal <int-search@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ben White <bwhite@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Scaling out Lily?" .
+
+<%23%23%23%23%23joel%40exitcertified.com___1407682539000___Question+about+Flume+Big+Data+example+from+courseware>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147c06afc4b15150" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1407682539000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "CATEGORY_FORUMS" , "Best Pracrtice/Search" , "IMPORTANT" , "Best Pracrtice/BDA - DataSet" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147c06afc4b15150" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "actp_instructors@cloudera.com" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "joel@exitcertified.com" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Question about Flume Big Data example from courseware" .
+
+<%23%23%23%23%23Luke+Hebert+%3Clhebert%40cloudera.com%3E___1463672571000___Re%3A+Strange+problem+when+running+Terasort+in+Encryption+Zone>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "154c49803ec67927" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1463672571000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Encryption" , "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/Performance" , "Best Pracrtice" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "154c9af7d616ba3e" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Michael Ridley <mridley@cloudera.com>" , "FCE <fce@cloudera.com>" , "SME Enterprise <sme-enterprise@cloudera.com>" , "Roderick Yao <roderick.yao@cloudera.com>" , "SME Security <sme-security@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Luke Hebert <lhebert@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Strange problem when running Terasort in Encryption Zone" .
+
+<%23%23%23%23%23Michael+Ridley+%3Cmridley%40cloudera.com%3E___1463671600000___Re%3A+Strange+problem+when+running+Terasort+in+Encryption+Zone>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "154c49803ec67927" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1463671600000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice" , "Best Pracrtice/Encryption" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "154c9a03f01a74d6" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "SME Security <sme-security@cloudera.com>" , "Roderick Yao <roderick.yao@cloudera.com>" , "SME Enterprise <sme-enterprise@cloudera.com>" , "FCE <fce@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Michael Ridley <mridley@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Strange problem when running Terasort in Encryption Zone" .
+
+<%23%23%23%23%23Glynn+Durham+%3Cglynn%40cloudera.com%3E___1415195651000___Re%3A+Clarification+on+speculative+execution>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1497f36155706316" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1415195651000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "IMPORTANT" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" , "Teaching/DeveloperTraining" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "149803afb7a2408d" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "\"actp_instructors@cloudera.com\" <actp_instructors@cloudera.com>" , "Ravi Gurbaxani <ravi@technocrafty.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Glynn Durham <glynn@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Clarification on speculative execution" .
+
+<%23%23%23%23%23Erick+Erickson+%3Cerick.erickson%40cloudera.com%3E___1408389197000___Re%3A+Scaling+out+Lily%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147dc572de1760fa" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1408389197000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "CATEGORY_FORUMS" , "IMPORTANT" , "Best Pracrtice/Search" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147ea89b51b3b31f" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Ben White <bwhite@cloudera.com>" , "Search Internal <int-search@cloudera.com>" , "Eva Andreasson <eva@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Erick Erickson <erick.erickson@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Scaling out Lily?" .
+
+<%23%23%23%23%23%22Gianluca+Righetto+%28JIRA%29%22+%3Cjira%40apache.org%3E___1405791999000___%5Bjira%5D+%5BCreated%5D+%28GIRAPH-931%29+Provide+a+Strongly+Connected+Components+algorithm>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1474fbb98e02e877" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1405791999000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_PROMOTIONS" , "Best Pracrtice/Giraph Hints" , "ASF Giraph" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1474fbb98e02e877" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "giraph-dev@incubator.apache.org" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "\"Gianluca Righetto (JIRA)\" <jira@apache.org>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "[jira] [Created] (GIRAPH-931) Provide a Strongly Connected Components algorithm" .
+
+<%23%23%23%23%23Jeff+Bean+%3Cjwfbean%40cloudera.com%3E___1379023717000___Hi+Training+team%2C>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14114385a369cc61" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1379023717000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Performance" , "IMPORTANT" , "CATEGORY_FORUMS" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14114385a369cc61" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Training Team <training-team@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Jeff Bean <jwfbean@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Hi Training team," .
+
+<%23%23%23%23%23Bertrand+Dechoux+%3Cbdechoux%40xebia.fr%3E___1394791480000___Re%3A+How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394791480000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Swapping Discussion" , "INBOX" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144c00d00cb53f6d" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Kris Geusebroek <kgeusebroek@xebia.com>" , "actp_instructors Mailing List <actp_instructors@cloudera.com>" , "Martin Wang <martin.wang@analyticservice.net>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Bertrand Dechoux <bdechoux@xebia.fr>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: How to avoid swapping?" .
+
+<%23%23%23%23%23Tom+Wheeler+%3Ctwheeler%40cloudera.com%3E___1370990795000___Re%3A+Streaming+API+Performance%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "13f207436b336734" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1370990795000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "IMPORTANT" , "Best Pracrtice/Performance" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "13f356bae607060c" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Jason Levitt <jason.levitt@globalknowledge.com>" , "actp_instructors <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Tom Wheeler <twheeler@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Streaming API Performance?" .
+
+<%23%23%23%23%23Nathan+Neff+%3Cnathan.neff%40cloudera.com%3E___1440552838000___Benchmarking+tools+for+Impala>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14f67a3ed28d686e" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1440552838000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "IMPORTANT" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14f67a3ed28d686e" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "training-team <training-team@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Nathan Neff <nathan.neff@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Benchmarking tools for Impala" .
+
+<%23%23%23%23%23Ian+Wrigley+%3Cian%40cloudera.com%3E___1384272533000___Admin+instructors%3A+Good+discussion+of+whether+Infiniband+is+useful>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1424d129eb8c4f16" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1384272533000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/HDFS" , "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/Performance" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1424d129eb8c4f16" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "actp_instructors Mailing List <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ian Wrigley <ian@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Admin instructors: Good discussion of whether Infiniband is useful" .
+
+<%23%23%23%23%23Martin+Wang+%3Cmartin.wang%40analyticservice.net%3E___1394784238000___How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394784238000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "Best Pracrtice/Swapping Discussion" , "Best Pracrtice/Performance" , "INBOX" , "CATEGORY_FORUMS" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "actp_instructors Mailing List <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Martin Wang <martin.wang@analyticservice.net>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "How to avoid swapping?" .
+
+<%23%23%23%23%23Jesse+Anderson+%3Cjesse%40cloudera.com%3E___1396370172000___Search+%2B+HBase>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1451e25ef5ed2cfc" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1396370172000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "INBOX" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" , "Best Pracrtice/Search" , "Best Pracrtice/HBase" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1451e25ef5ed2cfc" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Tom Wheeler <twheeler@cloudera.com>" , "Search Internal <int-search@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Jesse Anderson <jesse@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Search + HBase" .
+
+<%23%23%23%23%23Jeff+Bean+%3Cjwfbean%40cloudera.com%3E___1425323592000___Re%3A+Benchmarking+Data>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14bd9d51f860f1e8" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1425323592000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Configuration" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "INBOX" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14bdbe8624e4056a" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Raghavan Solium <raghavan.solium@osscube.com>" , "\"actp_instructors@cloudera.com\" <actp_instructors@cloudera.com>" , "Ian Wrigley <ian@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Jeff Bean <jwfbean@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Benchmarking Data" .
+
+<%23%23%23%23%23Eva+Andreasson+%3Ceva%40cloudera.com%3E___1408388715000___Re%3A+Scaling+out+Lily%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147dc572de1760fa" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1408388715000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Search" , "INBOX" , "IMPORTANT" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147ea82a58115e73" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Search Internal <int-search@cloudera.com>" , "Ben White <bwhite@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Eva Andreasson <eva@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Scaling out Lily?" .
+
+<%23%23%23%23%23Eva+Andreasson+%3Ceva%40cloudera.com%3E___1426096492000___Fwd%3A+Hortonworks+Solr+claim>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14c09f9e38f65810" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1426096492000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Performance" , "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/HDFS" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14c09f9e38f65810" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Search Internal <int-search@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Eva Andreasson <eva@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Fwd: Hortonworks Solr claim" .
+
+<%23%23%23%23%23Michael+Clarkson+%3Cmichael.clarkson%40cloudera.com%3E___1394802429000___Re%3A+How+to+avoid+swapping%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "144bf9e8a5a1acaf" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1394802429000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "Best Pracrtice/Swapping Discussion" , "INBOX" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "144c0b430d4ecfdb" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Cloudera Instructor Mailing List <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Michael Clarkson <michael.clarkson@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: How to avoid swapping?" .
+
+<%23%23%23%23%23Cloudera+Certified+Hadoop+Professionals+%3Cgroups-noreply%40linkedin.com%3E___1415531068000___A+fair+benchmark+for+Impala+2.0>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "149943a00231b195" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1415531068000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_SOCIAL" , "Best Pracrtice/BDA - DataSet" , "Best Pracrtice/Performance" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "149943a00231b195" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "=?UTF-8?Q?Mirko_K=C3=A4mpf?= <mirko@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Cloudera Certified Hadoop Professionals <groups-noreply@linkedin.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "A fair benchmark for Impala 2.0" .
+
+<%23%23%23%23%23Tom+Wheeler+%3Ctwheeler%40cloudera.com%3E___1407686802000___Re%3A+Question+about+Flume+Big+Data+example+from+courseware>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147c06afc4b15150" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1407686802000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice/Search" , "Best Pracrtice/BDA - DataSet" , "IMPORTANT" , "INBOX" , "Best Pracrtice/Performance" , "CATEGORY_FORUMS" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147c0ac53483798c" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "actp_instructors <actp_instructors@cloudera.com>" , "Joel Budgor <joel@exitcertified.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Tom Wheeler <twheeler@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Question about Flume Big Data example from courseware" .
+
+<%23%23%23%23%23Ravi+Gurbaxani+%3Cravi%40technocrafty.com%3E___1415178489000___Clarification+on+speculative+execution>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1497f36155706316" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1415178489000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "IMPORTANT" , "Best Pracrtice/Performance" , "Teaching/DeveloperTraining" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "1497f36155706316" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "\"actp_instructors@cloudera.com\" <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ravi Gurbaxani <ravi@technocrafty.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Clarification on speculative execution" .
+
+<%23%23%23%23%23Raghavan+Solium+%3Craghavan.solium%40osscube.com%3E___1425288796000___Benchmarking+Data>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "14bd9d51f860f1e8" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1425288796000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "INBOX" , "Best Pracrtice/Configuration" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "14bd9d51f860f1e8" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "\"actp_instructors@cloudera.com\" <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Raghavan Solium <raghavan.solium@osscube.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Benchmarking Data" .
+
+<%23%23%23%23%23Ravi+Gurbaxani+%3Cravi%40technocrafty.com%3E___1415248279000___Re%3A+Clarification+on+speculative+execution>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "1497f36155706316" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1415248279000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Teaching/DeveloperTraining" , "CATEGORY_FORUMS" , "INBOX" , "Best Pracrtice/Performance" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "149835efcef8db8c" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "\"actp_instructors@cloudera.com\" <actp_instructors@cloudera.com>" , "Glynn Durham <glynn@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Ravi Gurbaxani <ravi@technocrafty.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Clarification on speculative execution" .
+
+<%23%23%23%23%23Eva+Andreasson+%3Ceva%40cloudera.com%3E___1408387695000___Re%3A+Scaling+out+Lily%3F>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "147dc572de1760fa" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1408387695000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "IMPORTANT" , "CATEGORY_FORUMS" , "Best Pracrtice/Search" , "Best Pracrtice/Performance" , "INBOX" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "147ea731411baeff" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "Ben White <bwhite@cloudera.com>" , "Search Internal <int-search@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Eva Andreasson <eva@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Re: Scaling out Lily?" .
+
+<%23%23%23%23%23Adam+Kawa+%3Ckawa.adam%40gmail.com%3E___1373533734000___%5Badmin+question%5D+Measuring+CPU+contention+on+Hadoop+cluster>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "13fccfd8d99ae6f1" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1373533734000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "CATEGORY_FORUMS" , "Best Pracrtice/Performance" , "INBOX" , "IMPORTANT" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "13fccfd8d99ae6f1" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "\"actp_instructors@cloudera.com Instructors\" <actp_instructors@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Adam Kawa <kawa.adam@gmail.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "[admin question] Measuring CPU contention on Hadoop cluster" .
+
+<%23%23%23%23%23Roderick+Yao+%3Croderick.yao%40cloudera.com%3E___1463587136000___Strange+problem+when+running+Terasort+in+Encryption+Zone>
+        <http://www.semanpix.de/2015/etosha-mail/1.0#belongsToThread>
+                "154c49803ec67927" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#dateReceived>
+                "1463587136000" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasLabel>
+                "Best Pracrtice" , "Best Pracrtice/Encryption" , "INBOX" , "CATEGORY_FORUMS" , "Best Pracrtice/Performance" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#hasMailID>
+                "154c49803ec67927" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#receiver>
+                "SME Security <sme-security@cloudera.com>" , "SME Enterprise <sme-enterprise@cloudera.com>" , "FCE <fce@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#sender>
+                "Roderick Yao <roderick.yao@cloudera.com>" ;
+        <http://www.semanpix.de/2015/etosha-mail/1.0#subject>
+                "Strange problem when running Terasort in Encryption Zone" .

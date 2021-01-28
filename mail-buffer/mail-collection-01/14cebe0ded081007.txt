@@ -1,0 +1,54 @@
+You’re running into the HDFS default.  You’ll have to set the property in the /etc/hadoop/conf/hfs-site.xml file on your namenode and bounce the service.
+
+-William
+
+
+> On Apr 24, 2015, at 7:14 AM, joel@exitcertified.com wrote:
+> 
+> I'm conducting an experiment I in Spark.
+> In order to conduct the experiment, I need to reconfigure Spark.
+> 
+> 1. I changed the block size by modifying hdfs-site.xml as follows:
+> 
+>   <property>
+>       <name>dfs.block.size</name>
+>       <value>512</value>
+>   </property>
+> 
+> 2. I launch pyspark, which complains as follows:
+> 
+>   Py4JJavaError: An error occurred while calling
+>   None.org.apache.spark.api.java.JavaSparkContext.
+>   : org.apache.hadoop.ipc.RemoteException(java.io.IOException):
+>   Specified block size is less than configured minimum value
+>   (dfs.namenode.fs-limits.min-block-size): 512 < 1048576
+> 
+>   I interpret this to mean I need to define the dfs.namenode.fs-limits.min-
+>   block-size property. So I edit $SPARK_HOME/conf/spark-defaults as
+>   follows:
+> 
+>   spark.eventLog.enabled true
+>   dfs.namenode.fs-limits.min-block-size 512
+> 
+> 3. I launch pyspark again, but get the warning:
+> 
+>   Warning: Ignoring non-spark config property: dfs.namenode.fs-limits.min-
+>   block-size=512
+> 
+>   After which I get the same exception as described in step 2.
+> 
+>   I assume I am defining this property incorrectly, but can find no
+>   references to what I'm doing wrong.
+> 
+> Long story short, how do I tell Spark to change its minimum block size to
+> 512 bytes so I can proceed with my experiment?
+> 
+> Thanks much,
+> Joel Budgor
+> 
+> 
+> 
+> 
+> 
+
+

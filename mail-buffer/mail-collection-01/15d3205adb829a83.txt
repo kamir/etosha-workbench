@@ -1,0 +1,88 @@
+Hey Marco, 
+
+
+Not sure if you got a response on this -- I didn't see one. Scott had been looking at this a month or two ago. He may have some recommendations. Tristan Z gave the following insight on another thread: 
+
+
+The simplest way would be to use the extensible engines feature and make sure kudu client libs are installed into base container.  It is likely possible you could install these libs locally into the project, but I'm not positive on the required steps.
+
+
+Jordan VolzCloudera | Systems Engineer
+151 West 26th Street, New York, NY
+https://www.linkedin.com/in/jordanvolz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Tue, Jun 27, 2017 at 2:12 PM, Marco Picelli <marco@cloudera.com> wrote:
+Hi all
+
+
+is it possible to work on kudu via pyspark? any example? 
+
+
+I'm having issues to get a working kudu client in CDSW
+
+
+
+!pip install -v kudu-python
+....
+
+  Running setup.py (path:/tmp/pip-build-ubRJM8/kudu-python/setup.py) egg_info for package kudu-python
+    Running command python setup.py egg_info
+    Cannot find installed kudu client.
+Cleaning up...
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-ubRJM8/kudu-python/
+Exception information:
+Traceback (most recent call last):
+.....
+
+
+
+Thanks
+Marco
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAOHJLO%2B2kep4Ds%2BuxQMoXj3AZuLJmo%3D4BdU%3Dbsh3CND4JWk1jw%40mail.gmail.com.
+

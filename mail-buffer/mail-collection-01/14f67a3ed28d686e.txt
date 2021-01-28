@@ -1,0 +1,137 @@
+This is in response to a cry for help on TGCTT channel
+
+regarding a student req. for "Benchmarking tools for Impala".
+
+
+
+
+TL;DR .........
+
+
+Psyche!  There is no TL; DR.  Here's some soapbox and gag-inducing
+"experiences" that I'll reflect on, to make me feel like I know something!
+<Evil Laugh>
+
+
+
+Some students at Dell who had decades of tuning/optimization experience
+
+told me the same thing that Ian mentioned on Skype.  Benchmarking and
+
+performance tuning is a moving target, and is very ripe for making numbers
+
+and stats say whatever is wanted.  The student @ Dell said it can be very 
+tedious and unrewarding -- I was surprised!   I've always thought that 
+perf. tuning was the stuff the smart kids do.  
+
+To back up the point -- this Cloudera blog lists some of the "pitfalls" that the 
+student also mentioned :-O
+
+http://blog.cloudera.com/blog/2014/12/5-pitfalls-of-benchmarking-big-data-systems/
+
+
+Anyway, with that being said, most students (in my experience) simply want
+
+to ask "Hey, if we're using Impala it's supposed to be fast, so how can we
+
+make sure it runs fast, and how can we measure our performance and possibly
+
+tune it?"  -- Which is a very reasonable question to ask, especially for a product
+
+whose entire GOAL is to be fast.
+
+
+I know I will have forgotten some obvious things, so please post them here
+
+if they're public / referenceable or if they're private, but easily summarizable
+
+(e.g. some engineers use <some tool that's widely known> to gather stats
+
+from Impala when performance tuning)
+
+
+1.  The Cloudera official docs
+
+http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/latest/topics/impala_performance.html
+
+
+I try to guide students to Cloudera's official documentation (and/or blogs)
+
+first and foremost, because well, it's public information and I think it's 
+
+pretty good, as well.
+
+
+2.  Try the blogs (under Impala) This is the killer slide presentation 
+I was alluding to earlier (It's been updated in August 2015 !) And again, it's public info,
+
+so send the student the link, and away you go!
+
+
+http://blog.cloudera.com/blog/2014/12/the-impala-cookbook/
+
+
+(Okay, I figured out where I saw the link to this blog, it was in 
+this FCE mailing list e-mail from March titled "SQL Benchmarking") 
+
+https://groups.google.com/a/cloudera.com/forum/#!search/sql$20benchmarks/fce/oE4gvQWN-X0/p_mOlOYEon4J
+
+
+
+I recommend just pointing the students at the above two resources.
+
+
+Any other Impala benchmarking / performance tuning docs or public
+
+links are appreciated.
+
+
+3. Don't be afraid to send an e-mail and ask.  Don't abuse the system,
+
+but the system is there to be used -- we're (Education) are part of FCE
+
+and we are in front of customers for 8 hours a day.  It's okay to send a quick
+
+e-mail and ask these kinds of questions - I try to mention the research I've done
+and any ideas I might have, so show that I've put some effort into finding the answer myself,
+and I'm not just using the mailing lists as my minions :)
+
+
+
+Thanks,
+
+--Nate
+
+
+[1] Odyssey continues
+
+I try to find stuff on the wiki and e-mail lists (like FCE).  For example, I
+
+searched for "Impala" on the wiki and found this page (3rd hit):
+
+https://wiki.cloudera.com/display/engineering/Impala+Experts+Team
+
+
+However, this is a bunch of internal (and really killer stuff), but not consumable
+
+quickly.  (There's certainly cool benchmarking stuff like "Reading Query Performance",
+
+but again , it's internal)
+
+
+Then I found this internal wiki page in the search results on the wiki,
+which again, looks like a ton of great info, but internal:
+  
+https://wiki.cloudera.com/display/engineering/Impala
+
+
+
+
+
+
+
+
+
+
+
+

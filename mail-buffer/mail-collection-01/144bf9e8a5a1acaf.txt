@@ -1,0 +1,20 @@
+Hi Friends,
+    I have a cluster with 5 machines, CDH 4.6.0, everything is fine except sometimes it shows the yellow warn "swapping". Usually after running a job, also appear when the whole cluster keep idle for several days.
+
+    I googled a lot, but can't find a way to avoid these kind of swapping. Can you help me?
+
+
+
+Martin Wang 王鹏
+Consultant | Analytic Service Ltd.
+
+No. 100 An Xi Road, Shanghai 200050
+上海市长宁区安西路100号 200050
+
+M. 86 186 1655 4936
+www.analyticservice.net
+
+
+
+
+

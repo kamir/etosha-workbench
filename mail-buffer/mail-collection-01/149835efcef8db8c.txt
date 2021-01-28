@@ -1,0 +1,70 @@
+Thanks Glynn.
+
+This really helps
+
+
+On Wed, Nov 5, 2014 at 7:24 PM, Glynn Durham <glynn@cloudera.com> wrote:
+Ravi ---
+
+
+
+Responses below.
+
+
+
+On 11/5/14, 3:08 AM, Ravi Gurbaxani wrote:
+
+
+Dear Team,
+
+
+
+Am teaching developer class, and a student asked about speculative execution.
+
+
+
+Now the question is
+
+"Speculative execution is an act of JT/AM, running one more instance of tasks that may be running slow somewhere. How does the framework ensure that the new copy of task will not end up on a slow machine or would not end up being slow."
+
+
+
+
+
+The framework *doesn't* ensure that the second copy runs on a "fast" machine--it just assigns the task to another worker volunteering to do to work.  The hope is that you will just get lucky and the second task attempt will be faster.  (Although, notice, that if you have a group of machines that are faster than the others, they will volunteer for work more often.  :-))
+
+
+
+[1] If the reason that the first task attempt is slow is because of some crippling on the machine (such as intermittent seek errors on the disk, or dialed-down clock speed to control heat), then this is unlikely to reoccur on the second machine, so speculative execution (often informally called "speculation"), will probably help as intended.
+
+
+
+[2] Note that speculation can also occur for unhelpful reasons.  If a task attempt is running slowly because of some unusual condition in in its *data*, then speculation can cause this task to run again, and this will not be helpful, because it is the data at hand and not the machine that is causing the slowdown.  Speculation doesn't know why it's running.  It's common to see a few speculative task attempts when jobs are ending, because among the few tasks at the end of a job, there is high likelihood that some will read non-local data, and they will come in slower.  Often, then, the original task attempt will still finish ahead of the second speculative task attempt.  Oh well, the system tried to help....
+
+
+
+The whole idea is that, if you have a 1000-node machine, you don't want to have one crippled box on the cluster become a rate-limiter of your jobs.  The solution is *probabilistic*, not perfect.
+
+
+Next phase of the question is
+
+"In case JT/AM schedules the new speculated task and that also runs slower than expected, will JT/AM continue running both slow tasks or it will suspend one and try somewhere else"
+
+
+
+
+
+No.  No such attempt.  Note that doing this might help in [1] above, and would just waste even more cycles in [2] above.
+
+
+Thank You
+
+
+
+
+
+
+
+
+
+

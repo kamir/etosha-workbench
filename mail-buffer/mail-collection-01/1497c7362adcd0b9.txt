@@ -1,0 +1,25 @@
+Hello,
+
+
+I have a User who has operational folks at the Unix login level. They can effectively
+
+become root and have access to KeyTab files. How do you prevent this?
+
+Can the key tab be encrypted? if yes how does the rest of the system work.
+
+-- 
+Thanks and best regards,
+Bala Chander  |  Sr Solutions Consultant, Services | Cloudera
+Phone: +1 408-896-1334 
+bchander@cloudera.com
+
+
+
+
+
+
+
+
+
+
+

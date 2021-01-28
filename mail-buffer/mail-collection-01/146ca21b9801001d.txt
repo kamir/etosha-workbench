@@ -1,0 +1,35 @@
+
+    [ https://issues.apache.org/jira/browse/GIRAPH-877?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&focusedCommentId=14041140#comment-14041140 ] 
+
+Pavan Kumar commented on GIRAPH-877:
+------------------------------------
+
+the provided patch uses the correct equation (accounting for sink) & is production tested
+    double value = d * sum + (d * sinkSum / n) + (1.0 - d) * allSum / n;
+
+in SimplePageRankComputation the formula used is
+   double value = d * sum + (1.0 - d) / n;
+so it does not account for weights, etc. 
+
+> pagerank application on giraph
+> ------------------------------
+>
+>                 Key: GIRAPH-877
+>                 URL: https://issues.apache.org/jira/browse/GIRAPH-877
+>             Project: Giraph
+>          Issue Type: New Feature
+>         Environment: This patch has implementations for pagerank, residual pagerank, weightedpagerank & residualweightedpagerank.
+> Tests are also provided. mvn clean verify works.
+>            Reporter: Pavan Kumar
+>            Assignee: Pavan Kumar
+>         Attachments: pagerank.patch
+>
+>
+
+
+
+
+--
+This message was sent by Atlassian JIRA
+(v6.2#6252)
+

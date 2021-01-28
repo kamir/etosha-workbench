@@ -1,0 +1,21 @@
+On page 7-29 of the book you will find the following code.
+
+  @Override
+  public List<Event> intercept(List<Event> events) {
+    List<Event> result = new ArrayList<Event>();
+    for (Event event : events) {
+        Event intercepted = intercept(event);
+        result.add(intercepted);
+    }
+    return result;
+
+My question is: Why do we need the result list in this example?
+All we are doing is modifying a header in each event instance.
+Why not simply return the original list with its modified headers?
+
+Am I missing something?
+
+Thanks,
+Joel
+
+

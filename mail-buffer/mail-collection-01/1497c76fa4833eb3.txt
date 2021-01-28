@@ -1,0 +1,40 @@
+The threat model of Kerberos is trusted hosts on an untrusted network. We assume that they have secured the hosts appropriately. Anyone with root access to the KDC has access to all principals, and anyone with root access to the individual nodes will have access to the keytabs. This isn't unique to Hadoop, it's the way Kerberos works.
+
+Brian Burton
+
+
+
+
+
+
+On Tue, Nov 4, 2014 at 1:16 PM, Bala Chander <bchander@cloudera.com> wrote:
+Hello,
+
+
+I have a User who has operational folks at the Unix login level. They can effectively
+
+become root and have access to KeyTab files. How do you prevent this?
+
+Can the key tab be encrypted? if yes how does the rest of the system work.
+
+-- 
+Thanks and best regards,
+Bala Chander  |  Sr Solutions Consultant, Services | Cloudera
+Phone: +1 408-896-1334 
+bchander@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

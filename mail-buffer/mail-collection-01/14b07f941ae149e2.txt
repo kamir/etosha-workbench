@@ -1,0 +1,95 @@
+
+<div>On the SELinux front, last time it was benchmarked its effect was about 7% on untuned code. That number has gone down but it isn't an easy metric to grab. The effects are minimal and the benefits are huge. Configuration is NOT complex. That is a myth spread by admins too lazy to learn the 6 or 7 commands it takes to make it work. Here is the config for any application ever:<br>1. setenforce 0<br>2. Install and run application.<br>3. Check audit log for AVC alerts.<br>4. If there are alerts, run: audit2allow -alrM X where X is the name of the offending application.<br>5. Run semodule -i X.pp where X is the same as before. <br>6. setenforce 1<br>7. Feel superior as your system is protected from things like the heartbleed bug.<br><br>Never, ever, ever turn off SELinux.</div>
+<div class="mailbox_signature">
+<br>-- Michael Clarkson<br> RHC{E,I,X,VA,SA-OSP,DS,A} <br>
+CCAH Cloudera Instructor <br> President, Flakjacket Inc.</div>
+<br><br><div class="gmail_quote"><p>On Tue, Jan 20, 2015 at 8:18 AM, 'Scott Snyder' via actp_instructors <span dir="ltr">&lt;<a href="mailto:actp_instructors@cloudera.com" target="_blank">actp_instructors@cloudera.com</a>&gt;</span> wrote:<br></p><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;"><div><div style="color:#000; background-color:#fff; font-family:lucida console, sans-serif;font-size:16px">
+<div class="" id="yui_3_16_0_1_1421682748272_104503" style="outline: none 0px; display: table; width: 1504.4444580078125px; box-sizing: border-box; background-color: inherit; padding-top: 12px; padding-left: 0px;"><div class="" id="yui_3_16_0_1_1421682748272_104506" style="display: table-cell; width: auto; word-wrap: break-word; word-break: break-word;"><div id="yiv9602100641" class="" style=""><div id="yui_3_16_0_1_1421682748272_104505" class="" style=""><div id="yui_3_16_0_1_1421682748272_104504" style="font-size: 16px;" class="">
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92486" style="margin-bottom: 0in;">Answer1: RedHat and Oracle Linux support ext2 due to contract obligations. In all  RedHat and Oracle Linux  admin classes and all of their analysts/consultants </div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92486" style="margin-bottom: 0in;">move every customer to ext4, due to features and support issues.  Ext4 is a journaled file system that does not rely heavily on fsck. Full fsck can take a long time </div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92486" style="margin-bottom: 0in;">at boot-up on large file systems. RedHat teach the command tune2fs -c 0 -i 0 /dev/sda5     to fully turn off fsck because they trust the journaling.</div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92485" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_91774" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_91773" style="margin-bottom: 0in;">Answer2: SELinux is outstanding and provide file system protection. It places a context of every file, directory, daemons, and processes. </div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_91773" style="margin-bottom: 0in;">It takes some over head. SELinux is taught in RedHat's admin classes that are mid-level or above.  SELinux is excellent at providing protection</div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_91773" style="margin-bottom: 0in;">and will lock an application down, if any context violation is found, and  always at the most critical time. </div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_91772" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92488" style="margin-bottom: 0in;">When the students are asked “ Do you use SELinux on your production systems?” Ninety five (95%) or more reply that their company</div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92488" style="margin-bottom: 0in;">disables SELinux. Even most students from Government Agencies reply that they disable SELinux.</div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_92487" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_93435" style="margin-bottom: 0in;">Performance is not the issues with SELinux in most cases. SELinux is excellent at securing a production system </div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93435" style="margin-bottom: 0in;">and if it is not properly administered, SELinux can lock down a production application or applications.  A skilled Linux administrator will be</div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93435" style="margin-bottom: 0in;">needed to trouble-shoot the problem.  An untrained admin could waste hours trying to find the problem.  Most unskilled admins will put</div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93435" style="margin-bottom: 0in;">SELinux in permissive mode and at a later time disable it completely.  </div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_93619" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div id="yiv9602100641yui_3_16_0_1_1421682748272_91753" class="" style=""></div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;">Lack of proper SELinux System Administration and training keeps most Linux customers from using it. One improper use of the mv </div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;">command and a whole application could be locked.</div>
+<div class="" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;">/scott</div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;"><br clear="none" class="" style=""></div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;">RedHat Instructor for 4 years</div>
+<div class="" dir="ltr" id="yiv9602100641yui_3_16_0_1_1421682748272_93620" style="margin-bottom: 0in;">Oracle Linux instructor 10+ years</div>
+<div class="" style="" id="yui_3_16_0_1_1421682748272_105854"><br class="" style=""></div>
+</div></div></div></div></div> <div class="qtdSeparateBR">
+<br><br></div>
+<div class="yahoo_quoted" style="display: block;"> <div style="font-family: lucida console, sans-serif; font-size: 16px;"> <div style="font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif; font-size: 16px;"> <div dir="ltr"> <font size="2" face="Arial"> On Tuesday, January 20, 2015 10:14 AM, Ian Wrigley &lt;ian@cloudera.com&gt; wrote:<br></font> </div>  <br><br><div class="y_msg_container">
+<div id="yiv4068742077">
+<div>Hi Tünde<div class="yiv4068742077"><br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077">1. ext2 is now very old. Pretty much every current Linux filesystem is a journaling filesystem these days (I can't think of one that isn't, off the top of my head). I believe that when our engineers looked at disabling journaling they found very little difference in terms of speed -- and any increase there was, was outweighed by the fact that a crash would require a full fsck of the filesystem when the machine reboots, which is extremely painful if you have a 36TB worker node...</div>
+<div class="yiv4068742077"><br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077">2. I'm not aware of any specific papers or tests, but that's a fairly well-accepted rule of thumb. More important than just the performance impact, though, is the fact that you need to build a pretty complex set of rules to allow all the relevant daemons to talk to each other on all the ports they need -- and that an update to Hadoop could easily break things.</div>
+<div class="yiv4068742077"><br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077">Ian.<br clear="none" class="yiv4068742077"><div class="yiv4068742077yqt6756497486" id="yiv4068742077yqt90507">
+<div class="yiv4068742077">
+<span class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;"><br clear="none" class="yiv4068742077Apple-interchange-newline">---</span><br clear="none" class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;"><span class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;">Ian Wrigley</span><br clear="none" class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;"><span class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;">Director, Educational Curriculum</span><br clear="none" class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;"><span class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;">Cloudera, Inc</span><br clear="none" class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;"><span class="yiv4068742077" style="font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;orphans:2;widows:2;color:rgb(108, 108, 108);font-size:11px;">Cell: (323) 819 4075</span>
+</div>
+<br clear="none" class="yiv4068742077"><div><blockquote class="yiv4068742077" type="cite">
+<div class="yiv4068742077">On Jan 20, 2015, at 6:20 AM, Tünde Balint &lt;<a rel="nofollow" shape="rect" class="yiv4068742077" href="mailto:tbalint@xebia.com">tbalint@xebia.com</a>&gt; wrote:</div>
+<br clear="none" class="yiv4068742077Apple-interchange-newline"><div class="yiv4068742077">
+
+</div>
+</blockquote></div>
+</div>
+</div>
+</div>
+<div class="yiv4068742077yqt6756497486" id="yiv4068742077yqt19841">
+<div>
+<div class="yiv4068742077" style="word-wrap:break-word;font-size:14px;font-family:Calibri, sans-serif;">
+<div class="yiv4068742077">Hi all,</div>
+<div class="yiv4068742077"><br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077">The students asked me a couple of questions</div>
+<ol class="yiv4068742077"><li class="yiv4068742077">What is the reason why we don’t mention non-journaling filesystems (they asked esp. for ext2)? What is cloudera’s stand point for this? What would the performance implications be?</li>
+<li class="yiv4068742077">Regarding SELinux : do we have any tests/papers or something which underlines that the performance impact is 7-10% and why? And what is the required complex configuration?</li>
+</ol><div class="yiv4068742077"><br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077">I will also try to look up some answers after the course, but was hoping that somebody just knows the answers :)</div>
+<div class="yiv4068742077"><br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077">
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+Met vriendelijke groet/Kind regards/Tisztelettel,</div>
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+<b class="yiv4068742077">Tünde Bálint</b>
+</div>
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+Big Data Solutions Wizard</div>
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+<span class="yiv4068742077" style="font-family:Arial;font-size:12px;line-height:14px;"><font class="yiv4068742077" color="#ffffff">▉</font></span><span class="yiv4068742077" style="color:rgb(0, 150, 175);font-family:Arial;font-size:12px;line-height:14px;">▉</span><span class="yiv4068742077" style="color:rgb(255, 255, 255);font-family:Arial;font-size:12px;line-height:14px;">▉</span><span class="yiv4068742077" style="font-family:Arial;font-size:12px;color:rgb(0, 150, 175);line-height:14px;">▉</span><span class="yiv4068742077" style="color:rgb(37, 37, 37);font-family:Arial;font-size:12px;line-height:14px;">▉</span><span class="yiv4068742077" style="color:rgb(0, 150, 175);font-family:Arial;font-size:12px;line-height:14px;">▉</span><span class="yiv4068742077" style="color:rgb(0, 150, 175);font-family:Arial;font-size:12px;line-height:14px;">▉</span><span class="yiv4068742077" style="font-family:Arial;font-size:12px;line-height:14px;"><font class="yiv4068742077" color="#ffffff"> </font></span><font class="yiv4068742077" color="#606060" style="font-family:Arial;line-height:14px;font-size:18px;">Go</font><font class="yiv4068742077" color="#252525" style="font-family:Arial;line-height:14px;font-size:18px;">DataDriven</font>
+</div>
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+M: +31 (0)635 118 414<br clear="none" class="yiv4068742077"></div>
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+<br clear="none" class="yiv4068742077webkit-block-placeholder"></div>
+<div class="yiv4068742077" style="color:rgb(34, 34, 34);font-family:arial, sans-serif;font-size:small;background-color:rgb(255, 255, 255);">
+W: <a rel="nofollow" shape="rect" class="yiv4068742077" href="http://godatadriven.com/" style="color:rgb(17, 85, 204);">http://godatadriven.com</a>, <span class="yiv4068742077" style="font-family:Calibri, sans-serif;font-size:11px;">proudly part of the Xebia group</span>
+</div>
+</div>
+</div>
+
+<br clear="none" class="yiv4068742077"></div>
+<div>
+<div></div>
+
+To unsubscribe from this group and stop receiving emails from it, send an email to <a rel="nofollow" shape="rect" href="mailto:actp_instructors+unsubscribe@cloudera.com">actp_instructors+unsubscribe@cloudera.com</a>.<br clear="none"></div>
+</div>
+</div>
+<br><br></div>  </div> </div>  </div> </div></div></blockquote></div><br>

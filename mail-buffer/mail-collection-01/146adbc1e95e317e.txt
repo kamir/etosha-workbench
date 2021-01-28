@@ -1,0 +1,252 @@
+Hi Gianluca,
+
+many thanks for your mail. I am doing fine, but as you, I was really busy last weeks. We are on the move, which means, in some weeks we move into another house and we are really excited about his. 
+
+
+
+I like the Gephi graph. Do you know this post: http://blog.cloudera.com/blog/2014/05/how-to-manage-time-dependent-multilayer-networks-in-apache-hadoop/
+
+Gephi is great for showing graphs, and using the Gephi-Hadoop-Connector also time dependent graphs can be exported from Hadoop via a set of node- / edge-list queries against Hive or Impala. I think this helps a lot for debugging if embedded into an algorithm. 
+
+
+
+I think, such a coworking session would be nice. What do think about implementing the following: 
+
+
+Starting with your algorithm we use "snapshots" to store the state of the graph from time to time using the build in feature in Giraph. Now we add a hook, which allows a kind of turn on or turn off feature (just switching a flag which tells the algorithm to do a snapshot or even not during a superstep) ... this request goes to zookeeper.
+
+
+
+I think about a command like this:
+
+
+
+
+
+
+gctrl enableSnapshots $jobID $step0 $stepDist
+
+
+gctrl : the tool to interact with zookeeper
+
+
+
+enableSnapshots : command to turn dynamic snapshotting on
+
+disableSnapshots : command to turn of dynamic snapshotting
+
+listSnapshotable : shows all running jobs, which are registered with the "snapshot feature"
+
+
+
+$jobID : the id of a Girpah job
+$step0 : first or next superstep, which finishes with a snapshot
+$stepDist : steps without a snapshot
+
+
+
+
+
+
+A basic structure for the Zookeeper stuff is ready. We have to change the Giraph Job a bit, best would be a helper class into which
+all snapshot controle things are delegated.
+
+
+Use Case:
+
+
+
+If snapshots are enabled, the state of the current graph is implicitely dumped to HDFS in a way which allows Hive / Impala queries.
+Therefore the Tables are prepared and all snapshots build partitions within that tabel. This allows us to show the graph in Gephi and we can do
+
+dynamic inspection outside of Giraph. In a long running job, one can step from on superstep to the next to study the behaviour at the critical point e.g.
+in the range around a phase transition.
+
+
+
+Results:
+
+
+a) the patch which has the code for Giraph
+b) a demo to present in Giraph workshops, especially to show how to debug algorithms on scale, using your new algorithm
+
+
+
+What time would you suggest for the session? We can start with a code walkt through or an inspection of the patch to warm up a bit.
+What do you think about this approach and when would it work for you?
+
+
+
+Cheers,
+and best wishes
+Mirko
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+On Mon, Jun 16, 2014 at 10:19 PM, Gianluca Righetto <gianluca@menttis.com> wrote:
+
+Hallo Mirko, wie geht es Ihnen?
+
+We haven't spoken for a while, I got involved with many stuff at work that kept me very busy in the last couple of months.
+
+Anyway, I wanted to let you know that I have finally pushed the changes for the Strongly Connected Components algorithm for Apache Giraph in my GitHub fork.
+Would you mind taking a look at it? I think it would be a good exercise to do some kind of pair programming.
+
+This is the repository where you can find my work: https://github.com/grighetto/giraph/tree/trunk (commit 641391132fa11b27acf0b24382e619b89801b121)
+
+
+
+I added a unit test that generates a graph and finds the SCC in it. To help you visualize what this graph looks like (and to identify the components) I created a Gephi visualization that is attached to this message. Each color in the graph represents a different strongly connected component.
+
+Please, let me know what you think.
+
+
+By the way, what steps should I follow next to make this contribution back to Giraph? Should I create a Jira issue somewhere and send a diff/patch?
+
+
+
+Thanks,
+Gianluca Righetto
+
+ 
+ 
+Am 27.04.2014 um 07:29 schrieb Mirko Kämpf:
+
+
+
+Hi Gianluca,
+
+this is not good news on one side, but that you want to go on with this project is great.
+I will support you as good as I can. 
+
+
+
+What are the properties of your development environment?
+
+I do my tests with a 4 node C5 cluster and with a one node dev-cluster.
+After you forked the master branch I will clone it, so we are on the same track.
+Let me know the name of the project.
+
+
+
+
+Enjoy your Sunday!
+
+
+Cheers,
+Mirko
+
+
+   
+
+
+On Thu, Apr 24, 2014 at 7:14 PM, Gianluca Righetto <gianluca@menttis.com> wrote:
+
+
+Hello,
+
+Unfortunately, my proposal wasn't selected for GSoC this year, actually, I was surprised that only 39 projects projects were accepted by Apache (that's low considering the number of projects supported by the foundation) and none of them were related to Giraph, which is a shame.
+
+
+Anyway, I think I've gone too far to let the effort die now, so I'd like to make this contribution anyway, I even got the code started already.
+So, what would be the best way to do it? Should I fork the master branch in GitHub and send a pull request when everything is ready?
+
+
+Mirko, would you still be interested in helping me out by reviewing the code, trying it out, or simply providing some comments?
+
+
+Many thanks to both of you and, hopefully, next year Giraph will be amongst the selected projects.
+
+
+
+
+Best regards,
+Gianluca Righetto
+
+Am 18.03.2014 um 20:41 schrieb Gianluca Righetto:
+
+
+Hello Mirko and Avery,
+
+I'm sending this message just to let you both know that I officially submitted my project proposal to Google Summer of Code, given you two were the ones who showed some interest in supporting the project.
+
+
+You can take a look at the proposal in Google's Melange platform here: http://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/gianlucar/5629499534213120
+
+
+
+
+Thanks,
+Gianluca Righetto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+-- 
+Mirko Kämpf
+
+Trainer @ Cloudera
+
+
+tel: +49 176 20 63 51 99
+
+skype: kamir1604
+mirko@cloudera.com
+
+
+
+
+

@@ -1,0 +1,20 @@
+2017-08-29 14:14:51,356 INFO  [main] util.VersionInfo: HBase 1.2.4
+2017-08-29 14:14:51,372 INFO  [main] util.VersionInfo: Source code repository git://asf-dev/home/busbey/projects/hbase revision=67592f3d062743907f8c5ae00dbbe1ae4f69e5af
+2017-08-29 14:14:51,373 INFO  [main] util.VersionInfo: Compiled by busbey on Tue Oct 25 18:10:20 CDT 2016
+2017-08-29 14:14:51,376 INFO  [main] util.VersionInfo: From source with checksum b45f19b5ac28d9651aa2433a5fa33aa0
+2017-08-29 14:14:51,686 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-29 14:14:52,413 INFO  [main] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-08-29 14:14:52,561 INFO  [main] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-08-29 14:14:52,562 INFO  [main] impl.MetricsSystemImpl: HBase metrics system started
+2017-08-29 14:14:52,654 INFO  [main] mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-08-29 14:14:52,712 INFO  [main] http.HttpRequestLog: Http request log for http.requests.rest is not defined
+2017-08-29 14:14:52,723 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
+2017-08-29 14:14:52,730 INFO  [main] http.HttpServer: Added global filter 'clickjackingprevention' (class=org.apache.hadoop.hbase.http.ClickjackingPreventionFilter)
+2017-08-29 14:14:52,733 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context rest
+2017-08-29 14:14:52,733 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-08-29 14:14:52,734 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-08-29 14:14:52,749 INFO  [main] http.HttpServer: Jetty bound to port 8085
+2017-08-29 14:14:52,750 INFO  [main] mortbay.log: jetty-6.1.26
+2017-08-29 14:14:53,130 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:8085
+2017-08-29 14:14:53,130 INFO  [main] mortbay.log: jetty-6.1.26
+2017-08-29 14:14:53,160 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:8080

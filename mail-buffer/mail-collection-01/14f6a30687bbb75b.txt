@@ -1,0 +1,98 @@
+On Tue, Aug 25, 2015 at 6:33 PM, Nathan Neff <nathan.neff@cloudera.com> wrote:
+
+http://blog.cloudera.com/blog/2014/12/5-pitfalls-of-benchmarking-big-data-systems/
+
+
+
+
+[...]
+ 
+
+http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/latest/topics/impala_performance.html
+
+
+
+
+[...]
+
+ 
+
+http://blog.cloudera.com/blog/2014/12/the-impala-cookbook/
+
+
+
+
+
+
+
+
+
+
+
+Wonderful stuff, Nate. Strongly agreed that perf testing is something that "everyone wants" but few really understand - especially in terms of what the numbers mean. My approach to this demand is to give them a really basic benchmark with many a caveat ("Beware - Here Be Dragons", "All Hope Abandon Ye Who Press <Enter> Here", etc.) - using Teragen for HDFS write speeds and bandwidth testing, and maybe, just maybe if they beg on bended knee, Terasort for a high-water mark for their current configuration. It also makes for a nice little diversion - one that everyone seems to enjoy - if you're running short of material during Admin. :)
+
+
+E.g.:
+
+
+# Show them the cool toys included with Hadoop
+
+find /usr/lib/hadoop* -iname '*example*jar'
+
+
+# Use any one of the returned JAR files to see what's available
+
+hadoop jar /path/to/one/of/the/above/jars
+
+
+# Use the node CPU to toast your bagels in the morning
+hadoop jar hadoop-examples.jar pi <MAX_MAPPERS_IN_CLUSTER> 1000000000
+
+
+# 100GB being written to HDFS is the ultimate excuse for a coffee break
+
+hadoop jar hadoop-examples.jar teragen -D dfs.replication=1 -D mapred.map.tasks=<MAX_MAPPERS_IN_CLUSTER> 100000000 teragen_test
+
+
+# Have you ever seen smoke coming from a network card?
+hadoop jar hadoop-examples.jar teragen -D mapred.map.tasks=<MAX_MAPS_IN_CLUSTER> 100000000 teragen_test
+
+
+
+(This last test is reputed to create 3-9X the network activity as compared to the average operating level; see the wonderful "Fanatics" writeup by PS at https://cloudera.app.box.com/files/1/s/distcp/1/f_22314148599 .)
+
+
+
+That seems to satisfy even the most demanding "I must have the metrics for my cluster" student. However, I will now also be recommending the "pitfalls" writeup as a part of this process - for those students who actually *care* about making the numbers meaningful. 
+
+
+
+> > The student @ Dell said it can be very
+> >  tedious and unrewarding -- I was surprised!   I've always thought that
+> >  perf. tuning was the stuff the smart kids do. 
+>
+> This came out wrong -- I meant to say I thought perf. testing and
+> engineering was an awesome, glory filled role that everyone clamored for,
+> and that the hallways parted and heads bowed to perf. engineers as they
+> walk past on their way to the cafeteria.
+
+
+Nah, it's a cult of personality thing. Guys like ATM and The Sammer get that treatment wherever they go, and the rest of us can only look on with green envy. :) But, y'know - a few more posts like this one, and you too might join their hallowed ranks...
+
+
+
+Really good stuff, thanks!
+
+
+
+
+Cheers,
+
+
+-- 
+Ben Okopnik
+Senior Instructor, Cloudera
+
+
+
+

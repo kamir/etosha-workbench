@@ -1,0 +1,27 @@
+Dear Team,
+
+Had a couple of questions, would be great if someone can help:
+
+
+1. While connecting BeeLine, we are using the hostname and port. Is there a configuration that I can put in my hive-site so that I dont have to specify the hostname and port everytime.
+
+
+
+2. On the YARN UI, we see  User Metrics for dr.who, what exactly is dr.who and how can that be changed. I understand its a default user, but some more light on that would be great.
+
+
+
+3. For HiveServer2 also, we require metastore service, why HIverserver2 to MySQL connectivity was directly preferred.
+
+
+Please help me with the same.
+
+
+Thank You
+
+
+
+
+
+
+

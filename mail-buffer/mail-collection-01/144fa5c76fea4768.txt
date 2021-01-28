@@ -1,0 +1,90 @@
+Hallo Mirko, wie geht's Ihnen? (it's not always I get the chance to practice my beginner-level german)
+
+
+Thanks for getting back to me!I agree with you on the Skype call, that's a good idea, we should schedule one in the near future, but maybe we can wait a little more until the project gets accepted. Well, actually even if it gets rejected, I'd like to work with you on that proposal.
+My Skype id is gian89.
+
+
+I'll let you know when they announce the final decision.
+
+
+Best regards,
+Gianluca Righetto
+
+
+
+Am 24.03.2014 um 10:56 schrieb Mirko Kämpf:
+
+Gianluca,
+
+
+Good luck! Please let me know about the decision.
+
+I suggest to schedule a Skype call to prepare the 
+next steps, if you like. 
+
+
+
+Best wishes 
+Mirko
+
+
+
+
+
+On Wed, Mar 19, 2014 at 1:00 AM, Avery Ching <aching@apache.org> wrote:
+
+Best of luck!
+
+
+
+On 3/18/14, 4:41 PM, Gianluca Righetto wrote:
+
+
+Hello Mirko and Avery,
+
+
+
+I'm sending this message just to let you both know that I officially submitted my project proposal to Google Summer of Code, given you two were the ones who showed some interest in supporting the project.
+
+You can take a look at the proposal in Google's Melange platform here: http://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/gianlucar/5629499534213120
+
+
+
+
+Thanks,
+
+Gianluca Righetto
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+-- 
+Mirko Kämpf
+
+Trainer @ Cloudera
+
+
+tel: +49 176 20 63 51 99
+skype: kamir1604
+
+mirko@cloudera.com
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+  The student @ Dell said it can be very 
+tedious and unrewarding -- I was surprised!   I've always thought that 
+perf. tuning was the stuff the smart kids do.  
+
+
+
+
+
+
+This came out wrong -- I meant to say I thought perf. testing and
+
+engineering was an awesome, glory filled role that everyone clamored for,
+
+and that the hallways parted and heads bowed to perf. engineers as they
+
+walk past on their way to the cafeteria.
+
+
+But I hear that's not always the case :)
+
+
+
+--Nate
+
+
+
+
+
+
+

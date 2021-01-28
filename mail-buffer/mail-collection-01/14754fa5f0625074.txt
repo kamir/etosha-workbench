@@ -1,0 +1,118 @@
+I successfully tested the code on a pseudo-distributed cluster and on a small dev-cluster with 10 map slots.
+The test-cluster was CDH4.5 and I used the profile "-P hadoop_2".
+
+
+
+I will check / update the literature references to have also this paper: "Optimizing Graph Algorithms on Pregel-like Systems" (Salihoglu, S., Widom, J., 2014) on the official Giraph website.
+
+
+
+Best wishes from London
+Mirko
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Sat, Jul 19, 2014 at 7:54 PM, Gianluca Righetto (JIRA) <jira@apache.org> wrote:
+
+
+
+     [ https://issues.apache.org/jira/browse/GIRAPH-931?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel ]
+
+
+
+
+Gianluca Righetto updated GIRAPH-931:
+
+-------------------------------------
+
+
+
+    Attachment: GIRAPH-931.patch
+
+
+
+This patch contains an SCC implementation along with an in-memory test to verify the code. This algorithm has also been tested on a real cluster using Wikipedia and Twitter datasets found on Stanford SNAP's website (http://snap.stanford.edu/data/index.html).
+
+
+
+
+> Provide a Strongly Connected Components algorithm
+
+
+> -------------------------------------------------
+
+>
+
+>                 Key: GIRAPH-931
+
+>                 URL: https://issues.apache.org/jira/browse/GIRAPH-931
+
+>             Project: Giraph
+
+>          Issue Type: Improvement
+
+>          Components: examples
+
+>            Reporter: Gianluca Righetto
+
+>            Priority: Minor
+
+
+>         Attachments: GIRAPH-931.patch
+
+>
+
+>
+
+> Provide an implementation of an algorithm for finding strongly connected components in a graph to augment the giraph-examples library. This has been initially proposed on GSoC'14.
+
+> A handful of graph algorithms have been researched in this paper: "Optimizing Graph Algorithms on Pregel-like Systems" (Salihoglu, S., Widom, J., 2014), and a detailed explanation of SCC can also be found in it.
+
+
+
+
+
+
+
+
+--
+
+This message was sent by Atlassian JIRA
+
+(v6.2#6252)
+
+
+
+
+
+
+
+
+
+-- 
+-- 
+Mirko Kämpf
+
+Trainer @ Cloudera
+
+
+tel: +49 176 20 63 51 99
+skype: kamir1604
+
+mirko@cloudera.com
+
+
+
+
+

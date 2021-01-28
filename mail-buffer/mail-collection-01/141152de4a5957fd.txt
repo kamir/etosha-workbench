@@ -1,0 +1,50 @@
+Jeff, this is a really good, high-level look at how to handle benchmarking/performance
+
+related customer questions.  I've been thrown a few curveballs by students (although they're few
+
+and far between).  
+
+
+The video is 15 minutes, and has some great high-level points, as well as pointers to the
+int-performance mailing list.  It was a good presentation, and it's worth the 15 minutes to
+
+
+watch.
+
+
+The presenter, Yanpei Chen is a good speaker, and he highlights great points how to point out
+why Cloudera and our products are top-notch and how to deal with "bake-offs" and other geeky
+
+
+numbers games that are played by competitors.
+
+
+Thanks,
+
+--Nate
+
+
+
+
+On Thu, Sep 12, 2013 at 6:08 PM, Jeff Bean <jwfbean@cloudera.com> wrote:
+
+Here's a webinar Yanpei Chen did for our field on benchmarking and performance.
+
+https://cloudera.webex.com/cloudera/ldr.php?AT=pb&SP=MC&rID=126326097&rKey=200e9eb4cbd93397
+
+
+
+
+
+Probably useful for instructors as well.
+
+
+
+Jeff
+
+
+
+
+
+
+

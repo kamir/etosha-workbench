@@ -1,0 +1,40 @@
+
+    [ https://issues.apache.org/jira/browse/GIRAPH-931?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&focusedCommentId=14088068#comment-14088068 ] 
+
+Sergey Edunov commented on GIRAPH-931:
+--------------------------------------
+
+Hi Gianluca, 
+Thank you for working on this! Can you please submit review board request (https://reviews.apache.org) or arcanist review request (https://reviews.facebook.net/) next time?
+Here is a list of things I noticed in the diff:
+1) Make sure you're consistent with using primitive types vs objects. E.g. in SccVertexValue value is Long while it should really be long, as you don't expect it to be null in write(). 
+2) Similarly you don't have to use List<Long> if you intend to store only primitive longs you can use primitive collections from fastutils, like it.unimi.dsi.fastutil.longs.LongArrayList  these have smaller memory footprint and hence can help scaling your code.
+3) In SccComputation you can move phase extraction from compute() to preSuperstep(), phase is not changed during the superstep and hence, no need to call it for each vertice.
+4) You can avoid creating new LongWritable() every time you send message by having LongWritable field in SccComputation and reusing it. 
+5) In clearParents(),  call to parents.clear() is not necessary as you discard parent right after this call anyway.
+
+These are mostly performance improvements, algorithm implementation is clean and looks good to me. Again, thank you for this great work!
+
+
+> Provide a Strongly Connected Components algorithm
+> -------------------------------------------------
+>
+>                 Key: GIRAPH-931
+>                 URL: https://issues.apache.org/jira/browse/GIRAPH-931
+>             Project: Giraph
+>          Issue Type: Improvement
+>          Components: examples
+>            Reporter: Gianluca Righetto
+>            Priority: Minor
+>         Attachments: GIRAPH-931.patch
+>
+>
+> Provide an implementation of an algorithm for finding strongly connected components in a graph to augment the giraph-examples library. This has been initially proposed on GSoC'14.
+> A handful of graph algorithms have been researched in this paper: "Optimizing Graph Algorithms on Pregel-like Systems" (Salihoglu, S., Widom, J., 2014), and a detailed explanation of SCC can also be found in it.
+
+
+
+--
+This message was sent by Atlassian JIRA
+(v6.2#6252)
+

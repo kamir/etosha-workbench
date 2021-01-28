@@ -1,0 +1,60 @@
+Hello Rafa,
+
+I have found this slides: https://de.slideshare.net/databricks/memory-management-in-apache-spark
+
+
+The take-away message is that Spark uses the two types of memory: Execution and Storage.
+
+Execution is for Shuffle, Join, Sort, Aggregate ....
+Storage only for cache.
+
+Both get spilled to disc.
+
+Historically there was a fixed boundary, but now we can use the "Storage" also for "Execution" memory if available.
+
+So far this is a per "executor" story. 
+
+Now we think about multiple tasks: The overall memory get used by all tasks, and this causes other tasks to spill, but maybe the last task which
+runs alone does not have to spill, since it can use all the memory.
+
+
+Does this look reasonable? I think it can explain why you see the spills, even if your executor has a higher capacity, but this is shared by all tasks in it.
+
+But maybe I am on the wrong path - would like to discuss and improve the way of thinking about this.
+
+
+Cheers,
+Mirko
+
+
+
+
+		 		Mirko Kämpf
+	Solutions Architect
+	phone: +49 176 206 35 199
+
+skype: kamir1604
+mail: mirko@cloudera.com
+	 		Cloudera, Inc.
+	1001 Page Mill Road
+	Building 2
+	Palo Alto, CA 94304
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

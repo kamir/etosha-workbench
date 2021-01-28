@@ -1,0 +1,18 @@
+Hi,
+
+This is my personal question, that comes to my mind :) But I assume that it is beneficial for everyone to ask it.
+
+
+I would like to determine whether my workload is CPU-bound and I configured TaskTracker to run too many (or too few) tasks?
+
+
+
+Basically, how CPU contention can be measured on Hadoop nodes. What numbers are the most important? CPU context switches, CPU interruptions, CPU nice/system/wait/idle, size of run queue? What numbers are really BAD and what are GOOD for a multi-core server. 
+
+
+
+Thanks for any tips!
+
+Adam
+
+

@@ -1,0 +1,59 @@
+I understand that we can upload the files to container from CDSW but one of my customers is asking if we can mount NAS folder within CDSW container. They want to implement dropbox kind of functionality to exchange files between local folder and the container. Please let me know if this is possible or any better way of doing it.
+
+Thanks,
+Sreekanth
+
+
+
+
+-- 
+			Sreekanth Krishnavajjala | Systems Engineer
+	t. 972.989.0972 e. sreekanthk@cloudera.com
+	cloudera.com
+
+
+					
+
+
+
+
+
+
+ 						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/CAL%2BhNwELX8TEMCHS41b4GZe-FAmt6_im2X3CXsTOc-QUsPZxow%40mail.gmail.com.
+

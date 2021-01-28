@@ -1,0 +1,70 @@
+That is all done through the application layer, nothing interesting for us to glean there 
+
+On Mon, Apr 20, 2015 at 11:45 AM, Eva Andreasson <eva@cloudera.com> wrote:
+Omneo has a full multi-tenant search cluster, some of their indexes are billions of docs, while others are medium sized. I bet the KB can be based on the knowledge we've gained there. Including Kevin and Nick to help produce the content for the KB.
+
+On Mon, Apr 20, 2015 at 8:36 AM, Jeff Shmain <jshmain@cloudera.com> wrote:
+ CDH-27170
+
+
+In the meantime, how should we recommend clients do it?  Do we have any clients that have it set up one way or the other?   I know in Boa GIS we only use one service, but all of their collections are small.
+
+
+
+
+
+
+On Mon, Apr 20, 2015 at 10:45 AM, Eva Andreasson <eva@cloudera.com> wrote:
+I am not aware that we have one. Open a JIRA for a KB?
+
+On Mon, Apr 20, 2015 at 6:44 AM, Jeff Shmain <jshmain@cloudera.com> wrote:
+Hi team,
+Do we have any official documentation regarding running multiple tenants on Cloudera Search.  
+
+
+Do we recommend running it all on 1 service or create multiple services in CM, which means multiple solr cores?
+
+
+Also if we create multiple services (with the same znode), would we be able to create an alias across different collections?
+
+
+Thanks a lot,
+
+Jeff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Kevin O'Dell
+Field Enablement, Cloudera
+
+
+
+
+

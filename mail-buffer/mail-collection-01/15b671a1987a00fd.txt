@@ -1,0 +1,53 @@
+FYI 
+
+Anfang der weitergeleiteten Nachricht:
+
+Von: Anton Vukovic <vukovic@cloudera.com>
+
+Betreff: Aw: Cloudera Cluster Deployment @ TUI CE
+
+Datum: 4. April 2017 um 18:32:44 MESZ
+
+An: "Wolffram, Kai" <kai.wolffram@tui.com>
+
+Kopie: "Herweg, Lars" <lars.herweg@tui.com>, "Hüls, Stefan" <stefan.huels@tui.com>, Gunnar Mende <gunnar.mende@cloudera.com>, Michael Kohs <mkohs@cloudera.com>
+
+
+
+
+
+Guten Tag Hr. Wolffram,
+
+
+Der Zeitplanung paßt. 
+Um ein reibungsloses Deployment zu erzielen würde ich Sie bitten Ihr Augenmerk auf zwei Dinge zu richten.
+- Ich bitte Sie sicherzustellen das wir als Team d.h. Cloudera PS mit Ihren Administratoren das Deployment umsetzen. Einerseits weil wir das Deployment auch als Hands-On Enablement/Training des Kunden verstehen und es somit eine vertane Chance für Sie wäre sich mit unserer Technology im Beisein eines Experten vertraut zu machen. Andererseits natürlich auch weil wir Ihre Hilfe brauchen um evtl. kurzfristig notwendige Infrastruktur Konfigurationen die für das Deployment erforderlich sind umzusetzen (FW,DNS,…). Das inkludiert auch root oder sudo access für uns.
+- Das zweite wären die Berücksichtigung der beiden beigefügten Dokumente: 
+A) Unsere Referenz Architektur für AWS Deployments 
+B) Die generell notwendigen Prerequisites für ein Deployment (Das ist Unabhängig von Deployment Typ d.h. Bare Metall oder Cloud und damit ist die Ref Architektur im Zweifel die präzisere Quelle für manche Aspekte).
+
+
+Meine Vorschlag wäre, und es hat sich als sinnvoll erwiesen, ein Telefonat in der KW15 durchzuführen, in der wir 
+a) beiden Parteien ermöglichen noch mal Fragen zu den Anforderungen zu stellen bzw. zu klären um sicherzugehen das wir perfekt vorbereitet sind.
+b) den Deployment Termin final beidseitig zu bestätigen
+c) die Organization des Einsatzes  ( Wer? Wann? Wo?) abzuschliessen
+
+
+Könnten Sie bitte 2-3 Terminvorschläge für die KW 15 machen? 1h sollte reichen.
+
+
+Herzliche Grüße,
+Anton Vukovic
+
+
+Practice Manager CEMEA, Professional Services
+mobile: +49 162 2813 079
+mail: vukovic@cloudera.com
+
+Skype: vukovic.anton
+Cloudera, Inc. | www.cloudera.com
+
+
+
+
+

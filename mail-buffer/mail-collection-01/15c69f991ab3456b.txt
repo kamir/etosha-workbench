@@ -1,0 +1,228 @@
+Just to be clear about one thing that might be obvious:
+
+In CDSW it is perfectly fine to go home and leave analysis running, close your laptop, etc.  It will only timeout if the session is idle, but the notebook will still have all the results.  The notebook results do not require a frontend to be connected.  This is not the case in Jupyter (see https://github.com/ipython/ipython/issues/4140, which has been open since 2013).  This is a major advantage of CDSW to current versions of Jupyter.  
+
+
+I'm not positive about RStudio Server behavior.  I'd hope they do better, but I haven't checked.  Does anybody know off hand?
+
+
+Tristan
+
+
+On Fri, Jun 2, 2017 at 10:49 AM, William Chow <william@cloudera.com> wrote:
+Thank you Matt and Jordan for your input. Great questions and comments, and I agree that we do need more information on what they are running and how (local or cluster) they are running their analysis. Stay tuned.
+
+In the meantime, if there are no dependancies to other systems/session then, is the request plausible?
+
+
+Thanks,
+
+William Chow
+Systems Engineer
+Cloudera | www.cloudera.com
+416-428-9690 | william@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Fri, Jun 2, 2017 at 1:36 PM, Jordan Volz <jordan.volz@cloudera.com> wrote:
+@Matt -- is there no ability to set custom timeouts? I thought I remember that was possible (but I agree with Will that I can't find where you would do that). If nothing else, seems like that is a nice to have. 
+
+
+@Will -- I agree with Matt that this sounds like they're likely working in single node fashion. It's probably worth figuring out if that's the case. Even if it's spark with juptyer, that may be something like a local standalone spark and not actually running on the main cluster. People get confused about that. 
+
+
+Assuming they are 1) actually running on the cluster and 2) doing things that warrant running it overnight, I'd ask if the session itself is useful, or just the output. You know you can always view what happened in the session, but you should also be able to export any work product. I.e. PMML files for your model, or dump predictions out to a table, etc. (these are all probably good candidates for execution via jobs as well).  
+
+
+Worst case scenario, they should be able to initiate something like a sleep loop at the end of their session to keep the session alive and then interrupt it when they get back. This theoretically should give you back your interactive session, but I would guess that many of your system connections may have timed out (i.e. impala, spark, etc). May or may not be a big deal. 
+
+
+Jordan VolzCloudera | Systems Engineer
+151 West 26th Street, New York, NY
+https://www.linkedin.com/in/jordanvolz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Fri, Jun 2, 2017 at 12:48 PM, Matt Brandwein <mbrandwein@cloudera.com> wrote:
+
+
+Will,
+
+
+What specific parts of their analysis take so long?
+
+
+Do they depend on active connections to / sessions in other systems, e.g. Spark, Impala, an external DBMS, or a cloud provider? Because CDSW can run arbitrary code, considering pause/resume - or even longer timeouts - means thinking through the dependencies on other systems in a shared environment.
+
+
+Or could they be sped up so that replay isn't as painful? If they're using single-node Jupyter/RStudio today, maybe parallelism is another option.
+
+
+
+Matt
+
+--
+
+Matt Brandwein
+Director, Products | Cloudera
+matt@cloudera.com
++1.617.744.9294
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Fri, Jun 2, 2017 at 8:50 AM, William Chow <william@cloudera.com> wrote:
+During a CDSW demo yesterday, a customer asked if a session could be resumed if it was stopped and I told them that it was not possible but that the results of the session are saved and persisted, and as long as they don't delete the session, they can go back and look at the results.
+
+They said that a lot of their work/jobs run for a long time (hours), even in their notebooks and IDEs (currently they use RStudio and Jupyter), and that quite often they leave something running, go home for the evening and then come back the following morning to resume what they were doing. From what I understand, and as discussed already in this thread, resuming a session is not even possible in Jupyter/Zeppelin notebooks today. However, the behaviour, as stated in our documentation is that "Sessions automatically stop after an hour of inactivity." and I did not see a setting on how to configure the time period after which sessions are automatically stopped. That means that if they are running something overnight and it finishes and is idle for an hour then the session is stopped, so when they come back in the morning they can't resume what they are doing. With RStudio and Jupyter, provided that there's no outage overnight/the computer doesn't crash/etc, then session and state is still there for them to continue working on it in the morning.
+
+
+For this scenario, would it make sense to have the ability to resume/restart a session, or just to have the ability to configure the duration of inactive sessions? 
+
+
+Please correct me if I'm wrong, as I don't know the full capabilities of containers, but as for saving the state of a session, whatever is in memory is transient, so "state" cannot really be saved as a snapshot and resumed...or can it? 
+
+
+Thanks,
+
+William Chow
+Systems Engineer
+Cloudera | www.cloudera.com
+416-428-9690 | william@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/CAJBDJDEWKsmgwVou_tuAAVQZOFqPp--npRt-fym4rP1%2BS5cALQ%40mail.gmail.com.
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+
+
+
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/CABy_Zq%3DANOrn%2Bhj8CY4W%2BH8zGR9qF2Csd%3Daq2m1yL8p2dRxmyQ%40mail.gmail.com.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/CAJBDJDG09HW0Ad6zVxVQkU6LNz6MtSJm_q9BcH0jBvZztY08_Q%40mail.gmail.com.
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SME CDSW" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to sme-cdsw+unsubscribe@cloudera.com.
+
+To post to this group, send email to sme-cdsw@cloudera.com.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/sme-cdsw/CAHO9uCdZTiO1qu58UCbsX8bZZrjfcZ4C%3DMT_Bwsr8GuTtkVe%2BA%40mail.gmail.com.
+

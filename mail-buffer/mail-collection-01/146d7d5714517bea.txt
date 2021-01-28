@@ -1,0 +1,30 @@
+
+    [ https://issues.apache.org/jira/browse/GIRAPH-877?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&focusedCommentId=14044560#comment-14044560 ] 
+
+Sebastian Schelter commented on GIRAPH-877:
+-------------------------------------------
+
+There is already an improved version of PageRank available in org.apache.giraph.examples.PageRankVertex which inherits from a vertex designed for random walks, did you check that?
+
+> pagerank application on giraph
+> ------------------------------
+>
+>                 Key: GIRAPH-877
+>                 URL: https://issues.apache.org/jira/browse/GIRAPH-877
+>             Project: Giraph
+>          Issue Type: New Feature
+>         Environment: This patch has implementations for pagerank, residual pagerank, weightedpagerank & residualweightedpagerank.
+> Tests are also provided. mvn clean verify works.
+>            Reporter: Pavan Kumar
+>            Assignee: Pavan Kumar
+>         Attachments: pagerank.patch
+>
+>
+
+
+
+
+--
+This message was sent by Atlassian JIRA
+(v6.2#6252)
+

@@ -1,0 +1,89 @@
+Ok - so that is _one_ option on how to handle it.
+
+I will find out who is using multi-tenant and instead implementing it using Sentry --- I believe MasterCard or Citi might...but it might also be later stages of their projects. 
+
+
+What they have talked about though is _same_ solr service, but multiple indexes served through it, to different teams. And I believe that is the same as Omneo does, but handling the access to it through their application instead. Per Kevin's comment.
+
+
+/Eva
+
+
+On Mon, Apr 20, 2015 at 8:58 AM, Kevin O'dell <kevin.odell@cloudera.com> wrote:
+That is all done through the application layer, nothing interesting for us to glean there 
+
+On Mon, Apr 20, 2015 at 11:45 AM, Eva Andreasson <eva@cloudera.com> wrote:
+Omneo has a full multi-tenant search cluster, some of their indexes are billions of docs, while others are medium sized. I bet the KB can be based on the knowledge we've gained there. Including Kevin and Nick to help produce the content for the KB.
+
+On Mon, Apr 20, 2015 at 8:36 AM, Jeff Shmain <jshmain@cloudera.com> wrote:
+ CDH-27170
+
+
+In the meantime, how should we recommend clients do it?  Do we have any clients that have it set up one way or the other?   I know in Boa GIS we only use one service, but all of their collections are small.
+
+
+
+
+
+
+On Mon, Apr 20, 2015 at 10:45 AM, Eva Andreasson <eva@cloudera.com> wrote:
+I am not aware that we have one. Open a JIRA for a KB?
+
+On Mon, Apr 20, 2015 at 6:44 AM, Jeff Shmain <jshmain@cloudera.com> wrote:
+Hi team,
+Do we have any official documentation regarding running multiple tenants on Cloudera Search.  
+
+
+Do we recommend running it all on 1 service or create multiple services in CM, which means multiple solr cores?
+
+
+Also if we create multiple services (with the same znode), would we be able to create an alias across different collections?
+
+
+Thanks a lot,
+
+Jeff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Kevin O'Dell
+Field Enablement, Cloudera
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+When asked about benchmarks, I always make these points:
+
+
+1. Hadoop performance is workload, framework and cluster specific.
+
+2. "performance" is often an overloaded term, sometimes meaning latency, sometimes meaning throughput, sometimes meaning concurrency/multitenancy, sometimes meaning utilization, etc. 
+
+3. The software is highly configurable by design because it can process lots of different kinds of data lots of different ways. So if you're judging the performance of hardware based on a benchmark result, it's important to understand what you are and aren't seeing.
+
+So one should be wary of benchmarks: just because you can make terasort scream doesn't mean your users will have a good experience. Likewise, just because a vendor makes a claim of superior benchmark performance on Hadoop doesn't mean that claim is the case on all workloads.
+
+
+That said, here's what we have:
+
+1. We like Teragen/sort/teravalidate because it's a defacto standard for IO and network on a cluster. You can run this and watch CM for network, CPU, disk utilization. It will help you tune things like mem, vcores, etc. on a cluster to a good starting point. There are google-able numbers that can tell you if you're in the ballpark or your cluster is misconfigured.
+
+2. We also like SWIM for MapReduce. We like it so much we hired the guy who wrote it right out of his PHD program for our performance team. https://github.com/SWIMProjectUCB/SWIM/wiki. The reason we like SWIM is because unlike the standard hadoop benchmarks, it tries to approximate real workloads based on actual logs and metrics seen in the wild.
+
+3. We *DIS*like TestDFSIO because it's too easy to misconfigure: you specify the number of files to write and the file size. 10 mappers writing a gigabyte will perform differently than one mapper writing 10gb and it's unclear what "better" means in each context.
+
+4. We like YCSB for HBase.
+
+5. We like TPC-DS for SQL workloads. In fact, we like it so much we blog about it frequently as we improve Impala. We publish these numbers not only to toot our horn but also to help customers know what they should be seeing:
+http://blog.cloudera.com/blog/2014/01/impala-performance-dbms-class-speed/
+
+
+
+All of the benchmarks above are good for rough comparisons with other clusters but they're primarily most useful for comparisons within the same cluster over time. If I know I can run a terasort in time x, I expect after doubling the cluster to be able to run it in ~x/2. If I don't see that, then I have something to investigate, particularly if my users are also complaining about slow jobs. I *don't care* that someone else can run it in some time < x on a different cluster (as long as it's not wildly off).
+
+
+My answer above doesn't quite address the real question, which is for standard benchmarks that a customer can run. As Ian alluded to we're talking about that internally but to date we don't have it. However, I find talking about the reasons why that's hard and of limited use really helps students understand.
+
+
+Jeff
+
+
+ 
+
+
+On Mon, Mar 2, 2015 at 9:47 AM, Ian Wrigley <ian@cloudera.com> wrote:
+Hi
+
+We don't have any generic benchmarks for CDH as a whole. If you check our blog, you'll find some benchmarks of Impala that we've published, but not for CDH as a whole. The real issue is that benchmarks for something as complex as CDH, with all its different components, can be manipulated to say whatever a person wants them to say, and frequently don't have any bearing on real-world use-cases. For example, would you benchmark just HDFS write performance? MapReduce? Spark? Pig? Hive? Impala? Write performance of Flume?... etc etc. There is some internal discussion ongoing about how we would do this in a meaningful way if we were to do it at all, but there's nothing on the near-term horizon.
+
+
+Best
+
+
+Ian.
+
+
+---
+Ian Wrigley
+Director, Educational Curriculum
+Cloudera, Inc
+Cell: (323) 819 4075
+
+
+
+On Mar 2, 2015, at 3:33 AM, Raghavan Solium <raghavan.solium@osscube.com> wrote:
+
+Hello All,
+
+
+I was delivering a Administration course last week and there were some questions around benchmarking.
+
+
+1.) Does Cloudera do benchmarking of CDH on various Linux flavors that are supported? Is there any data available on this?
+
+2.) Is there benchmarking data available for CDH for various hardware vendors?
+
+
+Appreciate if anyone can point me to any sources/ data available on the above two topics. Thanks in advance.
+
+-----------------------
+Thanks & Regards
+Raghavan Solium
+
+Lead Architect - BigData, OSSCube Ltd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

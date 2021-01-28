@@ -1,0 +1,182 @@
+I tried this as well - it requires root to install the C libraries that the Kudu Python lib uses.  No simple fix.The correct way to do this would be to have a Kudu 'gateway service' installed on the CDSW node (same as HDFS), which drops the dependancies. 
+
+
+You could use Impala via Impyla.  This will let you create, read/write Kudu tables.
+
+
+#!pip install thrift==0.9.3
+#!pip install thrift_sasl
+#!pip install sasl
+#!pip install impyla
+
+
+from impala.dbapi import connect
+conn = connect(host='mdonsky-4.gce.cloudera.com', database='default', port=21050)
+cur = conn.cursor()
+cur.execute('SHOW TABLES')
+cur.fetchall()
+
+
+
+Chris
+
+
+On Tue, Jul 11, 2017 at 4:25 PM, Michiaki Ariga <ariga@cloudera.com> wrote:
+I tried to hack setup.py, then I can execute pip install, but I couldn't import kudu. Maybe, it depends on sasl, that means we should build .so files for it. I think we have two choises: 1) create custom engine 2) create conda recipe. But I think it should be chosen 3) apache provides whl format binary on PyPi...
+
+On Tue, Jul 11, 2017 at 11:20 PM Jordan Volz <jordan.volz@cloudera.com> wrote:
+
+Hey Marco, 
+
+
+Not sure if you got a response on this -- I didn't see one. Scott had been looking at this a month or two ago. He may have some recommendations. Tristan Z gave the following insight on another thread: 
+
+
+The simplest way would be to use the extensible engines feature and make sure kudu client libs are installed into base container.  It is likely possible you could install these libs locally into the project, but I'm not positive on the required steps.
+
+
+Jordan VolzCloudera | Systems Engineer
+151 West 26th Street, New York, NY
+https://www.linkedin.com/in/jordanvolz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Tue, Jun 27, 2017 at 2:12 PM, Marco Picelli <marco@cloudera.com> wrote:
+Hi all
+
+
+is it possible to work on kudu via pyspark? any example? 
+
+
+I'm having issues to get a working kudu client in CDSW
+
+
+
+!pip install -v kudu-python
+....
+
+  Running setup.py (path:/tmp/pip-build-ubRJM8/kudu-python/setup.py) egg_info for package kudu-python
+    Running command python setup.py egg_info
+    Cannot find installed kudu client.
+Cleaning up...
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-ubRJM8/kudu-python/
+Exception information:
+Traceback (most recent call last):
+.....
+
+
+
+Thanks
+Marco
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CAOHJLO%2B2kep4Ds%2BuxQMoXj3AZuLJmo%3D4BdU%3Dbsh3CND4JWk1jw%40mail.gmail.com.
+
+
+
+
+
+-- 
+
+Aki Ariga
+
+Sales Engineer, Cloudera
+Global Site: http://www.cloudera.com/
+Japan Site: http://www.cloudera.co.jp/
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CACcRAYoYhPs%3Db%2B0PAMD3%2BH%3DeD1Y6P7Wu8u%2BX9zFzy_tGFh0XKw%40mail.gmail.com.
+
+
+
+
+
+
+
+-- 
+Christopher Royles
+Systems Engineer, Cloudera
+
+royles@cloudera.com  |  +44 (0) 7468 585224
+
+London, UK
+
+
+
+
+
+
+
+
+
+
+
+-- 
+
+You received this message because you are subscribed to the Google Groups "SE Specialization - Data Science & Data Engineering" group.
+
+To unsubscribe from this group and stop receiving emails from it, send an email to se-spec-data-processing-ml+unsubscribe@cloudera.com.
+
+To post to this group, send email to se-spec-data-processing-ml@cloudera.com.
+
+Visit this group at https://groups.google.com/a/cloudera.com/group/se-spec-data-processing-ml/.
+
+To view this discussion on the web visit https://groups.google.com/a/cloudera.com/d/msgid/se-spec-data-processing-ml/CACfuMPEFi1ZjkgYGkH-%3DE%2B_iOG0DkumPZjAL4mOfoYV%3DsFoPYw%40mail.gmail.com.
+

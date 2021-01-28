@@ -1,0 +1,12 @@
+In this blog post, it says:Is HBase an optimal storage medium for the given use case?
+
+I want to double check that this refers to the usual HBase caveats that one would have for any HBase project or are there extra caveats associated with Search + HBase? The article talks about slow downs due to writes, etc. Are there others?
+
+
+
+Thanks,
+
+
+Jesse
+
+

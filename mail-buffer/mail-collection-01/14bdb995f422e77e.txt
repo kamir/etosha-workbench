@@ -1,0 +1,55 @@
+Hi
+
+We don't have any generic benchmarks for CDH as a whole. If you check our blog, you'll find some benchmarks of Impala that we've published, but not for CDH as a whole. The real issue is that benchmarks for something as complex as CDH, with all its different components, can be manipulated to say whatever a person wants them to say, and frequently don't have any bearing on real-world use-cases. For example, would you benchmark just HDFS write performance? MapReduce? Spark? Pig? Hive? Impala? Write performance of Flume?... etc etc. There is some internal discussion ongoing about how we would do this in a meaningful way if we were to do it at all, but there's nothing on the near-term horizon.
+
+
+Best
+
+
+Ian.
+
+
+---
+Ian Wrigley
+Director, Educational Curriculum
+Cloudera, Inc
+Cell: (323) 819 4075
+
+
+
+On Mar 2, 2015, at 3:33 AM, Raghavan Solium <raghavan.solium@osscube.com> wrote:
+
+Hello All,
+
+
+I was delivering a Administration course last week and there were some questions around benchmarking.
+
+
+1.) Does Cloudera do benchmarking of CDH on various Linux flavors that are supported? Is there any data available on this?
+
+2.) Is there benchmarking data available for CDH for various hardware vendors?
+
+
+Appreciate if anyone can point me to any sources/ data available on the above two topics. Thanks in advance.
+
+-----------------------
+Thanks & Regards
+Raghavan Solium
+
+Lead Architect - BigData, OSSCube Ltd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

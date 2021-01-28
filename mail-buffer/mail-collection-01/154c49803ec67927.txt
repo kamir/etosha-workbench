@@ -1,0 +1,47 @@
+Hi,
+
+I just ran into a strange issue with customer. I issued Teragen and terasort tests on clusters (Kerberized, secured). Teragen ran without any problems. But when I ran Terasort on encryption zone. 
+
+
+Under Kerberized cluster, the job should run as user itself not as "yarn". This makes this issure more strange.
+
+
+Any ideas?
+
+
+# hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar terasort -Dmapreduce.job.reduces=30 -Dmapreduce.job.maps=30 /tmp/testZone0/5-18-teragen /tmp/testZone0/5-18-1-terasort
+
+
+......
+16/05/18 11:53:20 INFO mapreduce.Job: Job job_1463510514297_0013 failed with state FAILED due to: Application application_1463510514297_0013 failed 2 times due to AM Container for appattempt_1463510514297_0013_000002 exited with  exitCode: -1000
+For more detailed output, check application tracking page:https://us1salxhpm0013.corpnet2.com:8090/proxy/application_1463510514297_0013/Then, click on links to logs of each attempt.
+Diagnostics: org.apache.hadoop.security.authorize.AuthorizationException: User:yarn not allowed to do 'DECRYPT_EEK' on 'testKey0'
+Failing this attempt. Failing the application.
+
+
+
+
+-- 
+Roderick Yao
+Senior Solutions Consultant - Northeast 
+Phone:    +1 617-817-7819
+Email:      roderick.yao@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

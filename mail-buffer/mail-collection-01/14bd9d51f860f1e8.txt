@@ -1,0 +1,29 @@
+Hello All,
+
+
+I was delivering a Administration course last week and there were some questions around benchmarking.
+
+
+1.) Does Cloudera do benchmarking of CDH on various Linux flavors that are supported? Is there any data available on this?
+
+2.) Is there benchmarking data available for CDH for various hardware vendors?
+
+
+Appreciate if anyone can point me to any sources/ data available on the above two topics. Thanks in advance.
+
+-----------------------
+Thanks & Regards
+Raghavan Solium
+
+Lead Architect - BigData, OSSCube Ltd
+
+
+
+
+
+
+
+
+
+
+

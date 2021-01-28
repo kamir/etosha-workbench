@@ -1,0 +1,132 @@
+After working with Roderick I think we tracked this down. It appears as though Terasort is using the distributed cache. When it's in use apparently the jobs try to download stuff from it using the "yarn" user instead of the user that submitted the job. When the acls are locked down yarn is not allowed to do this. The upstream jiras suggested using a whitelist for yarn but that seems like a relatively bad way to fix this. It's a stop gap but not a solution I'd like to see be permanent.
+
+https://jira.cloudera.com/browse/CDH-40520
+
+
+
+- Luke H
+
+
+
+Backline Customer Operations Engineer
+Key Trustee SME
+
+
+Cloudera
+
+
+
+
+
+
+
+
+
+
+
+
+On Thu, May 19, 2016 at 10:26 AM, Michael Ridley <mridley@cloudera.com> wrote:
+Your copy+paste seems to indicate a root shell - what user did you kinit as?  What does klist show?
+
+
+Michael
+
+
+On Wed, May 18, 2016 at 11:58 AM, Roderick Yao <roderick.yao@cloudera.com> wrote:
+Hi,
+
+I just ran into a strange issue with customer. I issued Teragen and terasort tests on clusters (Kerberized, secured). Teragen ran without any problems. But when I ran Terasort on encryption zone. 
+
+
+Under Kerberized cluster, the job should run as user itself not as "yarn". This makes this issure more strange.
+
+
+Any ideas?
+
+
+# hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar terasort -Dmapreduce.job.reduces=30 -Dmapreduce.job.maps=30 /tmp/testZone0/5-18-teragen /tmp/testZone0/5-18-1-terasort
+
+
+......
+16/05/18 11:53:20 INFO mapreduce.Job: Job job_1463510514297_0013 failed with state FAILED due to: Application application_1463510514297_0013 failed 2 times due to AM Container for appattempt_1463510514297_0013_000002 exited with  exitCode: -1000
+For more detailed output, check application tracking page:https://us1salxhpm0013.corpnet2.com:8090/proxy/application_1463510514297_0013/Then, click on links to logs of each attempt.
+Diagnostics: org.apache.hadoop.security.authorize.AuthorizationException: User:yarn not allowed to do 'DECRYPT_EEK' on 'testKey0'
+Failing this attempt. Failing the application.
+
+
+
+
+-- 
+Roderick Yao
+Senior Solutions Consultant - Northeast 
+Phone:    +1 617-817-7819
+Email:      roderick.yao@cloudera.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+Michael Ridley <mridley@cloudera.com>
+office: (650) 352-1337
+mobile: (571) 438-2420
+Solutions Architect
+
+Cloudera, Inc.
+
+
+	
+			
+			
+			Celebrating a decade of community accomplishments
+
+			cloudera.com/hadoop10
+
+			#hadoop10
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

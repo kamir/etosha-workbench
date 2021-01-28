@@ -1,0 +1,17 @@
+IHAC with a question about the Lily indexer, specifically what you gain by having multiple instances.
+
+
+The Lily wiki (https://github.com/NGDATA/hbase-indexer/wiki) mentions that indexing work "is shared over all machines in the cluster", but do we have any information (or even ballpark numbers) to estimate how many indexers you need for a given workload?
+
+
+
+-- Ben WhiteSystems Engineer
+Cloudera, Inc
+310-908-0600
+
+
+
+
+
+
+

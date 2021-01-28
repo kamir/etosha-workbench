@@ -1,0 +1,40 @@
+Dear Mirko,
+ 
+As we have been discussing earlier I have been having trouble processing metadata through Cloudera Navigator.
+Originally I have entered the description and tags of tables and their fields, this was done manually in the navigator but I was wondering if there was a another way to do this.
+I read about metadata being saved as a file in HDFS, I tried to create a test file and find it in navigator but I was unsuccessful. 
+I have lots of similar metadata I would like to apply to multiple tables, I am wondering if there was a simple way to do this by using Cloudera Navigator. 
+Is there a way I can access the existing metadata and apply that to other present and future tables? Looking forward to your reply.
+ 
+Kind regards
+ 
+William Connolly 
+
+**********************DISCLAIMER*****************
+
+This message is private and confidential and it is intended exclusively for the addressee. If you receive this message by mistake, you should not disseminate, distribute or copy this e-mail. Please inform the sender and delete the message and attachments from your system. No confidentiality nor any privilege regarding the information is waived or lost by any mistransmission or malfunction.
+
+Any views or opinions contained in this message are solely those of the author, and do not necessarily represent those of ISBAN, unless otherwise specifically stated and the sender is authorized to do so.
+
+E-mail transmission cannot be guaranteed to be secure, confidential, or
+
+error-free, as information could be intercepted, corrupted, lost, destroyed, arrive late or incomplete, or contain viruses. ISBAN does not accept responsibility for any changes, errors or omissions in the contents of this message after it has been sent.
+
+This message is provided for informational purposes and should not be construed as a solicitation or offer to buy or sell any securities or related financial instruments.
+
+
+*********************AVISO LEGAL **********************
+
+Este mensaje es privado y confidencial y solamente para la persona a la que va dirigido. Si usted ha recibido este mensaje por error, no debe revelar, copiar, distribuir o usarlo en ningun sentido. Le rogamos lo comunique al remitente y borre dicho mensaje y cualquier documento adjunto que pudiera contener. No hay renuncia a la confidencialidad ni a ningun privilegio por causa de transmision erronea o mal funcionamiento.
+
+Cualquier opinion expresada en este mensaje pertenece unicamente al autor remitente, y no representa necesariamente la opinion de ISBAN, a no ser que expresamente se diga y el remitente este autorizado para hacerlo.
+
+Los correos electronicos no son seguros, no garantizan la confidencialidad ni la
+
+correcta recepcion de los mismos, dado que pueden ser interceptados,
+
+manipulados, destruidos, llegar con demora o incompletos, o con virus. ISBAN no se hace responsable de los cambios, alteraciones, errores u omisiones que pudieran hacerse al mensaje una vez enviado.
+
+Este mensaje solo tiene una finalidad de informacion, y no debe interpretarse como una oferta de venta o de compra de valores ni de instrumentos financieros relacionados.
+
+Ref:[PDB#015]

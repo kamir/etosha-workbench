@@ -1,0 +1,126 @@
+Hi Arnaud,
+
+Collection aliasing is still very much a supported feature and I can tell you that many of our customers are using it quite heavily, on production systems.
+
+
+When I was writing the Search course, I set up a few examples using aliasing, based on the excellent blog article by Mark Miller that you referenced. It worked without any problem. 
+
+
+The instructor guide notes for slides 12-23 and 12-24 give a pretty decent explanation and example of how and why you'd use aliasing. You can also read a bit more about aliasing on pages 440-442 on the Solr in Action book from Manning Press.
+
+
+I can't speak to the performance implications of many small vs. few large collections. I think it's largely a hypothetical question though, since details of the cluster (how many nodes, how much RAM/disk each has, current load from Solr and non-Solr tasks, etc.) come into play, and it's these details that matter. All things being equal, and assuming your servers could handle the load, I would guess that a few large collections (each with many shards) would be have slightly better performance than having the same data spread across a lot of tiny collections. I agree that having fewer collections would require less administration, and since labor costs usually outweigh hardware costs, it makes sense to optimize for that in most cases.
+
+
+As a practical matter, the use cases of which I am aware tend to have a small number of collections in the alias, such as 2 (old data vs. new data) 4 (one for each quarter of the year) or 7 (one per day of the week). 
+
+
+Hope that helps,
+
+
+Tom
+
+
+
+
+
+
+
+
+On Thu, Aug 25, 2016 at 9:33 AM, Arnaud Delanoue <arnaud@pue.es> wrote:
+Hi all,
+
+Some questions from my students:
+
+
+1- Collection Aliasing
+
+
+Do you have experience and/or any recomendation about using collections aliases? 
+I have found this post from a very good blog:
+http://blog.cloudera.com/blog/2013/10/collection-aliasing-near-real-time-search-for-really-big-data/
+but I was wondering if you have more information about that: is it a good practice to use it (depending on use case I suppose)? 
+I cannot find any more recent information...
+
+
+
+
+
+2- Collection size
+Is it better to have few big collections (with several shards) or more small collections?
+My guess: same performance but fewer big collections will give us less administrative tasks (easier to specify X shards instead of creating X collections...)
+
+
+
+
+
+
+Thanks for your help!!
+
+
+--
+Arnaud Delanoue
+Big Data Specialist
+arnaud@pue.es
+
+
+Madrid. c/ Arregui y Aruej, 25-27. CP 28007. t. 91 162 06 69
+
+Barcelona. Distrito 22@. Diagonal 98 - 100. CP 08019. t. 93 206 02 49
+
+www.pue.es | info@pue.es
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AVISO LEGAL: La información contenida en este mensaje de correo electrónico es confidencial y puede revestir el carácter de reservada. Está destinada exclusivamente a su destinatario. El acceso o uso de este mensaje, por parte de cualquier otra persona que no esté autorizada, pueden ser ilegales. Si no es Ud. la persona destinataria, le rogamos que proceda a eliminar su contenido. 
+Conforme a la Ley Orgánica 15/1999, de 13 de diciembre, le comunicamos que su dirección de correo electrónico forma parte de nuestro fichero automatizado con el objetivo de poder mantener el contacto con Ud. Si desea oponerse, acceder, cancelar o rectificar sus datos, póngase en contacto con Proyecto Universidad Empresa, S.L. al teléfono 932060249 o a través del correo electrónico protecciondedatos@pue.es
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- 
+		Celebrating a decade of community accomplishments
+cloudera.com/hadoop10
+#hadoop10
+
+
+
+
+
+
+
